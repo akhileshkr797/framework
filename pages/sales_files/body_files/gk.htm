@@ -1,0 +1,469 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0111)http://192.168.1.8:8080/wade6/jsp/app/gk.jsp -->
+<!DOCTYPE  PUBLIC "" ""><HTML><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+	 
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META http-equiv="Expires" content="0">	 
+<META http-equiv="Pragma" content="no-cache">	 <LINK href="gk_files/jquery.ui.all.css" 
+rel="stylesheet" type="text/css">	 <LINK href="gk_files/reset.css" rel="STYLESHEET" 
+type="text/css">	 <LINK href="gk_files/sweetalert.css" rel="stylesheet">	 <LINK 
+href="gk_files/superfish-menu.css" rel="STYLESHEET" type="text/css">	 <LINK 
+href="gk_files/wade.css" rel="STYLESHEET" type="text/css">	 <LINK href="gk_files/washington.css" 
+rel="STYLESHEET" type="text/css"> 
+<STYLE type="text/css">
+/* 11Dec18 Print media CSS added to zoom the page to 80% before printing*/
+@media print{
+	body{
+			zoom:80%;
+			transform: scale(1);
+		}	
+}
+html, body {
+	height: 98%;
+	font: 75%/120% Verdana,Arial, Helvetica, sans-serif;
+}
+.ui-state-highlight{
+	border: 1px solid #fcefa1/*{borderColorHighlight}*/;	
+	color: #363636/*{fcHighlight}*/;
+}
+.ui-state-highlight a {
+	color: #363636/*{fcHighlight}*/;
+}
+.rowchanged{
+	border:solid 1px #000;
+}
+.sortableList tr td{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+/* style added for freeze row by ESC on 01May18*/
+.tableContainer table{
+	border-spacing: 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+td.fth-header,
+th.fth-header,
+td.fth-footer,
+th.fth-footer {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+td.fth-header,
+th.fth-header {
+    background-color: #3D7083;
+    border-bottom: 1px solid  !important;
+    color: white;
+}
+
+td.fth-footer,
+th.fth-footer {
+    background-color: #4F90A8;
+    border-top: 1px solid  !important;
+    color: white;
+	padding-bottom:10px;
+
+}
+/*End of style for freeze Row*/
+</STYLE>
+ 
+<SCRIPT type="text/javascript">
+	window.onscroll = function () {
+		var oError = document.getElementById("err_msg");
+		oError.style.top = document.body.scrollTop+10;
+	}
+</SCRIPT>
+ 
+<SCRIPT language="javascript" src="gk_files/jquery.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/jquery-ui.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT language="javascript" src="gk_files/jquery.easytabs.js" type="text/javascript"></SCRIPT>
+ <!--Plugin added for freeze row by ESC on 01May18--> 
+<SCRIPT language="javascript" src="gk_files/tableHeadFixer.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT language="javascript" src="gk_files/hoverIntent.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT language="javascript" src="gk_files/superfish.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/sweetalert.min.js"></SCRIPT>
+ <!-- Highchart related files--> 
+<SCRIPT src="gk_files/highcharts.js"></SCRIPT>
+ 
+<SCRIPT src="gk_files/highcharts-3d.js"></SCRIPT>
+ 
+<SCRIPT src="gk_files/highcharts-more.js"></SCRIPT>
+ 
+<SCRIPT src="gk_files/exporting.js"></SCRIPT>
+ 
+<SCRIPT src="gk_files/ohm_highgraph.js"></SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY background="gk_files/white.jpg" topmargin="0" leftmargin="5" onclick="getName(event)" 
+onload='hideErrLayer();showFormMessage2("");init(this.document);styleButton();getFieldValues(this.document);ShowLayer(document.all.b1,document.all.div1 );insertBtns();'><!--Code moved by ESC on 30Oct18 to resolve Exit and cancel button not working since the form is moved to second postion in document-->
+		 
+<FORM onsubmit="return formSubmit(this,'SUBMIT')" action="/wade6/jsp/app/gk.jsp" 
+method="POST">
+<DIV class="err_msg" id="err_msg">ErrMsg</DIV><INPUT name="fldValues" type="hidden">
+		 <INPUT name="linkName" type="hidden">
+		 <INPUT name="ESC" type="hidden" value="2">
+		 <INPUT name="frmAuthenticate" type="hidden" value="N">		 <INPUT name="initFieldVals" type="hidden">
+		 <INPUT name="CHKCHG" type="hidden" value="N">		 <INPUT name="FOCUSCTL" type="hidden" value="null">
+		 <INPUT name="submitOnEnter" type="hidden" value="Y">
+		 <INPUT name="owait" type="hidden">		 </FORM>
+<SCRIPT src="gk_files/scripts.htm" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT type="text/javascript">
+	var applURL = '/wade6';
+	var g_appserver = '';	   	
+	var jsp_sysDate = 1550483605367;
+	var copySize = ''
+
+	top.content.document.getElementById("tblBody").rows[0].cells[0].width="1px";
+	top.content.document.getElementById("tblBody").rows[0].cells[1].width="100%";
+
+	//Code added by ESC on 13Oct06  to check for alert message in function instead of home page
+	top.glow = 0;		
+	if(top.title &&  top.title.glowBulb){top.title.glowBulb();}
+
+	//Code to Handle any new Messages		
+	top.sSystemMessages='';
+	if(top.title &&  top.title.checkSysMessage){
+		top.title.checkSysMessage();
+	}		
+	
+</SCRIPT>
+ <!--New--> 
+<SCRIPT src="gk_files/variables.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/common_event.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/common_new.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/validatedata.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/common_frm.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/common_layers.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/frm_new.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/util.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT>var g_Dateformat='I';</SCRIPT>
+ 
+<SCRIPT src="gk_files/date_int.js" type="text/javascript"></SCRIPT>
+ <!--old--> 
+<SCRIPT src="gk_files/arraysort.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/layer.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="gk_files/scrollfields.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT>
+//var g_Dateformat="I";//temp harcoded should be moved to script.jsp
+$(document).ready(function(){
+		/* code added for freeze row by ESC on 01May18*/
+	//$('.tableContainer').fixTableHeader({ fixHeader:true,fixFooter:true });
+	$(".tableContainer table").tableHeadFixer();
+	comment_obj=$("#div_comment");
+	comment_obj.dialog({
+			autoOpen: false,
+			height: 270,
+			width: 400,
+			modal: true,			
+			close: function() {
+			}
+	});
+	$("#marquee_div").show("clip",1000);
+	$('.marquee_close').on("click", function () {
+	    $("#marquee_div").fadeOut();
+	});
+	//$('.draggable_div').draggable();
+/* Added the code to resolve the conflict in drag and drop in L type Scroll Filed by ESC 10May18*/	
+	$('.draggable_div').draggable({
+	  addClasses: false
+	});
+	setDateField();
+	var panEmail = $("#div_email" ).dialog({
+		autoOpen: false,
+		width:350,
+		modal: true,
+		buttons: {		
+			Cancel: function() {
+				panEmail.dialog( "close" );
+			},
+			"Submit": function() {			
+					sendEmail();
+					panEmail.dialog( "close" );
+			}
+		}
+	});
+	$('.realign tbody').addClass("sortableList");
+	$('.realign tbody').sortable({
+	  cursor: "move",
+	  placeholder: "ui-state-highlight",
+	  helper: fixWidthHelper,
+	  connectWith:".sortableList",
+	  stop: function (event, ui) {
+                //ui.item.set("rowchanged");
+				ui.item.attr('class', 'rowchanged');
+      }
+	}).disableSelection();	
+	/*
+	$( ".sortable tbody" ).sortable( {
+		update: function( event, ui ) {
+		$(this).children().each(function(index) {
+				$(this).find('td').last().html(index + 1)
+		});
+	  }
+	});*/
+/* Added the code for focus on field for switching the tab by ABHI 04Jan19*/	
+	$(".tab").on("click",function () {
+		var temp=this.childNodes[0].href.split("#");
+		var lobj=eval("document.all."+temp[1]);
+		var ctlForm=getChildObjByTag(lobj,"FORM");
+		if (!ctlForm){return;}
+		var ctlObj = getEnabledControl(ctlForm);
+		if (ctlObj!=null){ctlObj.focus();}
+	});
+});
+function genInlineLabel(data_id,wd,ht,img_id){
+	    var label_data,img_64="";
+		$("body").append("<img id='image' style='transform:rotate(270deg);margin-left:35%;margin-top:-75px;' height='"+ht+"' width='"+wd+"'></img>");
+		try{
+			var sTemp=document.getElementById(data_id).textContent;
+		}catch(e){}		
+		if (!sTemp){
+			label_data = document.getElementById(data_id).innerHTML;
+		}else{
+			label_data= document.getElementById(data_id).textContent;
+		}
+		label_data="xmldata="+label_data;
+
+		$.ajax({
+            url: top.applURL+"/jsp/app/genLabel-inline.jsp",
+            type: "POST",
+			data: label_data,
+			mimeType: "text/plain; charset=x-user-defined",
+        }).done(function( data, textStatus, jqXHR ) {
+		str = base64Encode(data)
+        $("#image").attr('src', 'data:image/png;base64,' + str);
+		//$("#image").attr('src', data);
+        }).fail(function( jqXHR, textStatus, errorThrown ) {
+            alert("fail: " + errorThrown);
+        });
+}
+function base64Encode(str) {
+        var CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+        var out = "", i = 0, len = str.length, c1, c2, c3;
+        while (i < len) {
+            c1 = str.charCodeAt(i++) & 0xff;
+            if (i == len) {
+                out += CHARS.charAt(c1 >> 2);
+                out += CHARS.charAt((c1 & 0x3) << 4);
+                out += "==";
+                break;
+            }
+            c2 = str.charCodeAt(i++);
+            if (i == len) {
+                out += CHARS.charAt(c1 >> 2);
+                out += CHARS.charAt(((c1 & 0x3)<< 4) | ((c2 & 0xF0) >> 4));
+                out += CHARS.charAt((c2 & 0xF) << 2);
+                out += "=";
+                break;
+            }
+            c3 = str.charCodeAt(i++);
+            out += CHARS.charAt(c1 >> 2);
+            out += CHARS.charAt(((c1 & 0x3) << 4) | ((c2 & 0xF0) >> 4));
+            out += CHARS.charAt(((c2 & 0xF) << 2) | ((c3 & 0xC0) >> 6));
+            out += CHARS.charAt(c3 & 0x3F);
+        }
+		return out;
+}
+function show_sample(funcName){
+	var url=g_gkURL+ "ESC=31&funcName=JUI.SAMPLE&fldValues="+ funcName + "&linkName=&thirdParam=&isModal=false";
+	location.href=url;
+}
+function openPDF(objPDF){
+	var pdfFunction="JUI.START.FUNCTION";
+	var pdfIP1="SOL";
+	var pdfIP2="null";
+	var pdfIP3="null";
+	var param="";
+	if (objPDF){
+		 param=objPDF.getAttribute("OPDF");
+	}
+
+	window.location='/wade6/jsp/app/genPDF.jsp?funcname='+pdfFunction+'&ip1='+pdfIP1+'&ip2='+pdfIP2+'&ip3='+pdfIP3+'&pdfparam='+param;
+
+}		
+
+function fixWidthHelper(e, ui) {
+    ui.children().each(function() {
+        $(this).width($(this).width());
+    });
+    return ui;
+}
+function setDateField(){
+	if (g_Dateformat=="I"){
+		$('.ocalendar').datepicker({showOn: 'button', buttonImage: '../../images/new-calendar.gif', buttonImageOnly: true,constrainInput: false,	dateFormat: 'dd/mm/yy', beforeShowDay:calendarDayShow,onSelect: function (){this.focus();}});
+	}else{
+		$('.ocalendar').datepicker({showOn: 'button', buttonImage: '../../images/new-calendar.gif', buttonImageOnly: true,constrainInput: false,	dateFormat: 'mm/dd/yy', beforeShowDay:calendarDayShow,onSelect: function (){this.focus();}});
+	}
+}
+function calendarDayShow(targetDate){
+	var now = 1550483605367;
+	var pastDate = [true, 'ui-datepicker-past', ''];
+	var toDate = [true, 'ui-datepicker-today', ''];
+	var futureDate = [true, '', ''];
+
+	if (targetDate < now) {
+		return pastDate;
+	}else if (targetDate > now){
+		return futureDate;
+	}else{
+		return toDate;
+	}
+	
+}
+</SCRIPT>
+ <IFRAME name="iframeMask" id="iframeMask" src="javascript:false;" frameborder="0" 
+scrolling="no" 
+style="left: 0px; top: 0px; display: none; position: absolute;"></IFRAME> 
+<emailfilter>
+<DIV title="Please Enter Comments Below" id="div_comment" 
+style="display: none;">
+<DIV id="div_comment_title"></DIV>
+<DIV style="padding-top: 5px;"><TEXTAREA id="div_comment_text" rows="4" cols="50"></TEXTAREA></DIV></DIV>
+<DIV title="Message" id="error_dialog" style="display: none;">
+<DIV id="error_dialog_text"></DIV></DIV>
+<DIV title="E Mail" id="div_email" style="display: none;">
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><LABEL>To Address</LABEL>				 </TD>
+    <TD><INPUT name="to_mail" id="to_addr" type="text" size="30">				 </TD></TR>
+  <TR>
+    <TD><LABEL>From Address</LABEL>				 </TD>
+    <TD><INPUT name="from_mail" id="from_addr" type="text" size="30" value="projects@ohm-india.com">
+      				 </TD></TR>
+  <TR>
+    <TD><LABEL>Subject</LABEL>				 </TD>
+    <TD><TEXTAREA id="mail_subject"></TEXTAREA>
+				 </TD></TR></TBODY></TABLE></DIV></emailfilter> 
+<DIV id="blockDiv" style=""><!--The below lines were added for print header and footer on Sep10th2003 by Madhavi.N-->
+	 
+<TABLE width="100%" align="CENTER" border="0" cellspacing="0" cellpadding="0">
+  <THEAD id="headerline" style="display: table-header-group; visibility: hidden;" 
+  otext="OHM - We make the World's Best Bedding Software">
+  <TR>
+    <TD align="CENTER"></TD></TR></THEAD>
+  <TFOOT id="footerline" style="display: table-footer-group; visibility: hidden;" 
+  otext="Copyright - OHM Systems">
+  <TR>
+    <TD align="CENTER"></TD></TR></TFOOT>
+  <TBODY>
+  <TR>
+    <TD><!--upto this added for print header and footer  on Sep10th2003 by Madhavi.N-->
+      		 
+      <TABLE width="100%" align="CENTER" border="0" cellspacing="0" cellpadding="0">
+        <TBODY>
+        <TR>
+          <TD width="40" align="left"><IMG width="40" height="40" src="gk_files/schooner.jpg" 
+            border="0">	 </TD>
+          <TD width="40" title="Print this Page" align="center" border="0"><A 
+            onclick="window.print()"><IMG src="gk_files/print.gif"></A></TD>
+          <TD width="40" title="Export to Excel" align="center"><A onclick="openExcel(this)"><IMG 
+            src="gk_files/excel.gif" border="0"></A></TD>
+          <TD align="CENTER" class="TITLE" valign="top">Sales Order Lookup</TD>
+          <TD width="40">&nbsp;</TD>
+          <TD width="40">&nbsp;</TD>
+          <TD width="40" title="View Documentation" 
+        align="right"></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD height="100%" id="main_body_content" valign="top">
+      <FORM>
+      <TABLE align="center" cellspacing="0" cellpadding="1">
+        <TBODY>
+        <TR valign="middle">
+          <TD><SPAN class="links"><A name="TOPTEN" href="javascript: ancrSubmit(this)">My 
+            Recent Entries</A></SPAN>
+          <TD><SPAN class="links"><A href="javascript:show_Dialog(this)" 
+            otitle="OHM Drill Down Window" oi3="START,,RTN" oi2="SALES_ORDER_HDR" 
+            oi1="" uvsubr="JUI.SEARCH" omodaltype="SUB4">Advanced 
+            Search</A></SPAN></TD></TR></TBODY></TABLE></FORM>
+      <FORM name="frm1" action="" method="POST">
+      <TABLE align="CENTER" border="0" cellspacing="1" cellpadding="1">
+        <TBODY>
+        <TR>
+          <TD align="CENTER" onmouseover="showtooltip(this,event)" onmouseout="hidetooltip()" 
+          otooltip="Number assigned by the system for orders from customer.">Sales 
+            Order Number</TD>
+          <TD><INPUT name="SO_NBR" tabindex="1" align="LEFT" class="searchinput" id="11" onkeydown="altel('SO_NBR_SEARCH',event)" onfocus="gfocus(this,event)" onblur="lfocus(this,event)" type="TEXT" size="11" maxlength="25" ovalidate="Y" odup="Y" olabel="Sales Order Number" occr="U" odt="X"><INPUT name="SO_NBR_SEARCH" title="Sales orders may be searched by Customer Number, or by Customer's Purchase Order Number, sales rep id." class="searchoptionalbutton" onclick="show_Dialog(this,event)" type="BUTTON" value="&nbsp;&nbsp;&nbsp;" owait="Please Wait..." otitle="OHM Search Window" oi3="SEARCH,,,,,SO_NBR_SD,Y" oi2="SALES_ORDER_HDR|||11||" uvsubr="GET.OHMINDEX" omodaltype="CRT" osubmit="CR" otabindex="1" omsize="L"> 
+          </TD></TR></TBODY></TABLE></FORM>
+      <FORM name="frm2" action="" method="POST">
+      <TABLE align="center" bordercolor="#d8dadd" border="1" cellspacing="0" 
+      cellpadding="0">
+        <TBODY>
+        <TR>
+          <TD align="center">
+            <TABLE align="CENTER" bgcolor="#f4f2e8" border="0" cellspacing="1" 
+            cellpadding="1">
+              <TBODY>
+              <TR>
+                <TD align="center" colspan="5"><SPAN class="sectiontitle">To 
+                  get a List of Sales Orders, Enter one or more fields below, 
+                  and click "Submit".</SPAN></TD></TR>
+              <TR>
+                <TD align="CENTER" onmouseover="showtooltip(this,event)" 
+                onmouseout="hidetooltip()" otooltip="Our identifier for a customer<br><br>Customer master information such as Name, address, contacts, accounting rules and policies, pricing rules, scheduling and delivery information. One record per customer.<BR>">Customer 
+                  Number</TD>
+                <TD align="CENTER" onmouseover="showtooltip(this,event)" 
+                onmouseout="hidetooltip()" otooltip="Customer PO Number or reference number.<BR>If you use the same PO number more than once for the customer,the system warns you.">Customer 
+                  P.O. Nbr</TD>
+                <TD align="CENTER" onmouseover="showtooltip(this,event)" 
+                onmouseout="hidetooltip()" otooltip="One or more sales reps who receive sales commission on this sales order. The first sales rep is defaulted from the Customer file at the time order entry.">Sales 
+                  Rep</TD>
+                <TD align="CENTER" onmouseover="showtooltip(this,event)" 
+                onmouseout="hidetooltip()" otooltip="Business Entity to which this order belongs">Entity</TD>
+                <TD align="CENTER" onmouseover="showtooltip(this,event)" 
+                onmouseout="hidetooltip()" otooltip="Facility that ships this order">Facility</TD></TR>
+              <TR>
+                <TD><INPUT name="CUSTOMER_NBR" tabindex="2" align="LEFT" class="searchinput" id="12" onkeydown="altel('CUSTOMER_NBR_SEARCH',event)" onfocus="gfocus(this,event)" onblur="lfocus(this,event)" type="TEXT" size="11" maxlength="25" ovalidate="Y" odup="Y" olabel="Customer Number" occr="U" odt="X"><INPUT name="CUSTOMER_NBR_SEARCH" title="Customers may be searched by:&#10;. Short Name or abbreviation&#10;. Any word from Customer Name&#10;. First 3 letters of any word from customer name&#10;. City" class="searchoptionalbutton" onclick="show_Dialog(this,event)" type="BUTTON" value="&nbsp;&nbsp;&nbsp;" owait="Please Wait..." otitle="OHM Search Window" oi3="SEARCH,,,,,CUSTOMER_NBR_SD,Y" oi2="CUSTOMER|||12||" uvsubr="GET.OHMINDEX" omodaltype="RTN" osubmit="TAB" otabindex="2" omsize="M"> 
+                </TD>
+                <TD><INPUT name="CUSTOMER_PO_NBR" tabindex="3" align="LEFT" id="13" onfocus="gfocus(this,event)" onblur="lfocus(this,event)" type="TEXT" size="21" maxlength="25" odup="Y" olabel="Customer P.O. Nbr" odt="X"> 
+                </TD>
+                <TD><INPUT name="SALES_REP" tabindex="4" align="LEFT" class="searchinput" id="14" onkeydown="altel('SALES_REP_SEARCH',event)" onfocus="gfocus(this,event)" onblur="lfocus(this,event)" type="TEXT" size="11" maxlength="25" ovalidate="Y" odup="Y" olabel="Sales Rep" occr="U" odt="X"><INPUT name="SALES_REP_SEARCH" class="searchoptionalbutton" onclick="show_Dialog(this,event)" type="BUTTON" value="&nbsp;&nbsp;&nbsp;" owait="Please Wait..." otitle="OHM Search Window" oi3="SEARCH,,,,,SALES_REP_SD,Y" oi2="SALES_REP|||14||" uvsubr="GET.OHMINDEX" omodaltype="RTN" osubmit="TAB" otabindex="4" omsize="M"> 
+                </TD>
+                <TD><SELECT name="ENTITY" tabindex="5" align="CENTER" onfocus="gfocus(this,event)" 
+                  onblur="lfocus(this,event)" odup="Y"><OPTION></OPTION> 
+                    <OPTION value="BED">Ohmsoft</OPTION> <OPTION 
+                    value="OHMI">OHM International</OPTION> <OPTION 
+                    value="TEST">Test for gl company</OPTION> </SELECT> </TD>
+                <TD><SELECT name="FACILITY" tabindex="6" align="CENTER" 
+                  onfocus="gfocus(this,event)" onblur="lfocus(this,event)" odup="Y"><OPTION></OPTION> 
+                    <OPTION value="CIN">Cincinnati</OPTION> <OPTION 
+                    value="COL">Columbus</OPTION> <OPTION 
+                    value="DAY">Dayton</OPTION> <OPTION 
+                    value="IND">Indianapolis</OPTION> <OPTION value="NYC">New 
+                    York</OPTION> <OPTION value="MON">Montreal</OPTION> <OPTION 
+                    value="TOR">Toronto</OPTION> <OPTION value="KEY">OHM-Key 
+                    West</OPTION> <OPTION value="700">SIMMONS FACILITY</OPTION> 
+                    <OPTION value="COLWH">Columbus WH</OPTION> <OPTION value="C1">Pauling 
+                    Mattress</OPTION> </SELECT> 
+      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></FORM>
+      <TABLE align="center">
+        <TBODY>
+        <TR>
+          <TD align="center"><NOBR>
+            <DIV id="buttonsfrm">
+            <FORM name="buttonsform">
+            <CENTER><INPUT name="submit" tabindex="7" class="anchor" accesskey="S" onclick="return formSubmit(this.form,this.name)" onfocus="gfocus(this,event)" onblur="lfocus(this,event)" type="BUTTON" value="Submit" owait="Please wait ...<br>Processing Data">&nbsp;&nbsp;&nbsp;<INPUT name="cancel" tabindex="8" class="anchor" accesskey="C" onclick="return formSubmit(this.form,this.name)" onfocus="gfocus(this,event)" onblur="lfocus(this,event)" type="BUTTON" value="Exit">&nbsp;&nbsp;&nbsp;</CENTER></FORM></DIV></NOBR></TD></TR></TBODY></TABLE><SPAN 
+      class="tooltiplayer" id="tooltiplayer"></SPAN>		 
+<SCRIPT>
+showWait(0);
+</SCRIPT>
+       </TD></TR></TBODY></TABLE></DIV><!--END--> </BODY></HTML>

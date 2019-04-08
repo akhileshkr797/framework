@@ -1,0 +1,111 @@
+body {
+	background: rgb(121, 165, 201); width: 100%;
+}
+.header {
+	background: url("../images/darkbluebkgrd.jpg") no-repeat 0% 0% / 100% 100%;
+}
+.logo_td:hover {
+	border-radius: 0px; box-shadow: inherit;
+}
+.nav {
+	width: 100%;
+}
+.nav td {
+	text-align: center; padding-top: 2px;
+}
+.nav td div {
+	padding: 24px 5px 5px; width: 38px; text-align: center; margin-top: 5px; margin-right: 2px;
+}
+@media screen and (max-width:1366px)
+{
+.nav td div {
+	padding: 24px 4px 5px 5px; margin-right: 0px;
+}
+}
+@media screen and (max-width:1150px)
+{
+.nav td div {
+	padding: 24px 0px 5px; margin-right: 0px;
+}
+}
+.nav td.empty {
+	min-width: 1px;
+}
+.nav td div.back {
+	background: url("../images/toolbar/Back.png") no-repeat top;
+}
+.nav td div.home {
+	background: url("../images/toolbar/home.png") no-repeat top;
+}
+.nav td div.submit {
+	background: url("../images/toolbar/submit.png") no-repeat top; width: 40px;
+}
+.nav td div.cancel {
+	background: url("../images/toolbar/cancel.gif") no-repeat top;
+}
+.nav td div.rolodex {
+	background: url("../images/toolbar/Rolodex.png") no-repeat top; width: 50px;
+}
+.nav td div.search {
+	background: url("../images/toolbar/Search.png") no-repeat top;
+}
+.nav td div.help {
+	background: url("../images/toolbar/Help.png") no-repeat top;
+}
+.nav td div.faq {
+	background: url("../images/toolbar/FAQ.png") no-repeat top;
+}
+.nav td div.aboutus {
+	background: url("../images/toolbar/About.png") no-repeat top;
+}
+.nav td div.alert {
+	background: url("../images/toolbar/alert.png") no-repeat top;
+}
+.nav td div.msg {
+	background: url("../images/toolbar/IM.png") no-repeat top;
+}
+.nav td div.refresh {
+	background: url("../images/toolbar/Refresh.png") no-repeat top;
+}
+.nav td div.favorites {
+	background: url("../images/toolbar/Favorites.png") no-repeat top; width: 55px;
+}
+.nav td div.settings {
+	background: url("../images/toolbar/Preferences.png") no-repeat top; width: 60px;
+}
+.nav td div.printer {
+	background: url("../images/toolbar/Printer.png") no-repeat top; width: 55px;
+}
+.nav td div.logs {
+	background: url("../images/toolbar/Logs.png") no-repeat top;
+}
+.nav td div.reports {
+	background: url("../images/toolbar/Reports.png") no-repeat top;
+}
+.nav td div.logto {
+	background: url("../images/toolbar/logto.png") no-repeat top;
+}
+.nav td div.exit {
+	background: url("../images/toolbar/logout.png") no-repeat top;
+}
+.nav td a {
+	color: rgb(255, 255, 255); font-family: RobotoSlab-Regular; font-size: 14px; text-decoration: none;
+}
+.nav td:hover {
+	background: url("../images/blue.jpg") no-repeat 0% 0% / 100% 100%;
+}
+.nav_msg {
+	background: url("../images/gold.jpg") no-repeat 0% 0% / 100% 100%; color: rgb(0, 0, 0); line-height: 25px; padding-left: 96px; font-family: helvatica; font-size: 12px; font-weight: bold; margin-left: -88px;
+}
+.nav .logo_td:hover {
+	background: none; box-shadow: none;
+}
+td {
+	color: black; line-height: 10pt; font-family: Arial; font-size: 9pt;
+}
+td:hover {
+	border-radius: 6px; box-shadow: 2px 2px 2px #888888;
+}
+.nav .toolbar_logo {
+	width: 92%; padding-left: 30px; float: left;
+}

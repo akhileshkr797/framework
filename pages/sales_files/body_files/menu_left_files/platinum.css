@@ -1,0 +1,123 @@
+#div_menu {
+	background: rgb(213, 213, 213);
+}
+.favInput {
+	border: 1px solid rgb(113, 113, 113); border-image: none;
+}
+.favOuter {
+	border: 1px solid rgb(180, 182, 199); border-image: none;
+}
+.favTD {
+	border-bottom-color: rgb(180, 182, 199);
+}
+.favTD a {
+	color: rgb(0, 0, 0);
+}
+.favTD a:visited {
+	color: rgb(0, 0, 0);
+}
+.favTD a:hover {
+	color: rgb(0, 0, 0);
+}
+.fav_title {
+	font: bold 14pt/normal "Arial", "Tahoma", "Sans-Serif"; color: rgb(49, 49, 65); font-size-adjust: none; font-stretch: normal;
+}
+.header {
+	background-image: -ms-linear-gradient(rgb(182, 182, 182) 0%, rgb(156, 206, 247));
+}
+#left_menu {
+	color: rgb(56, 62, 80);
+}
+.logo_td:hover {
+	background: none; box-shadow: none;
+}
+#main-menu a:hover {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+#main-menu a.active {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+#menu a:hover {
+	background: rgb(105, 121, 152); color: rgb(255, 255, 255);
+}
+#menu a.active {
+	background: rgb(105, 121, 152); color: rgb(255, 255, 255);
+}
+.menu_title {
+	color: rgb(49, 49, 65);
+}
+.nav_msg {
+	background: url("../../images/hotpinkbkgrd.jpg") no-repeat 0% 0% / 100% 100%; color: rgb(255, 255, 255);
+}
+.nav td a {
+	color: rgb(0, 0, 0);
+}
+.nav td:hover {
+	background: -ms-linear-gradient(rgb(182, 182, 182) 0%, rgb(255, 255, 255) 180px) rgb(182, 182, 182); box-shadow: 2px 2px 2px 2px #000;
+}
+.sm-blue {
+	background: linear-gradient(rgb(105, 121, 152), rgb(128, 147, 185)) rgb(105, 121, 152);
+}
+.sm-blue ul {
+	background: rgb(255, 255, 255);
+}
+.sm-blue a {
+	color: rgb(255, 255, 255);
+}
+.sm-blue a:hover {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+.sm-blue a:focus {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+.sm-blue a:active {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+.sm-blue a.highlighted {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+.sm-blue ul a:hover {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+.sm-blue ul a:focus {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+.sm-blue ul a:active {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+.sm-blue ul a.highlighted {
+	background: rgb(30, 45, 76); color: rgb(255, 255, 255);
+}
+.sm-blue ul a {
+	background: 0px 0px; color: rgb(105, 121, 152);
+}
+.ui-icon {
+	background-image: url("../../scripts/jquery/themes/base/images/ui-icons_222222_256x240.png");
+}
+.ui-widget-content .ui-icon {
+	background-image: url("../../scripts/jquery/themes/base/images/ui-icons_222222_256x240.png");
+}
+.ui-menu .ui-menu-item {
+	background: rgb(213, 213, 213); border-bottom-color: rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.ui-menu .ui-menu-item:hover {
+	background: rgb(105, 121, 152); color: rgb(255, 255, 255);
+}
+.ui-menu .ui-menu-item a:hover {
+	background: rgb(105, 121, 152); color: rgb(255, 255, 255);
+}
+.ui-menu .ui-menu-item *:hover {
+	background: none;
+}
+.ui-state-active {
+	background: rgb(105, 121, 152); border: 1px solid white; border-image: none; color: rgb(255, 255, 255);
+}
+.ui-widget-content .ui-state-active {
+	background: rgb(105, 121, 152); border: 1px solid white; border-image: none; color: rgb(255, 255, 255);
+}
+.ui-widget-header .ui-state-active {
+	background: rgb(105, 121, 152); border: 1px solid white; border-image: none; color: rgb(255, 255, 255);
+}
+.ui-widget-content a {
+	color: rgb(0, 0, 0);
+}

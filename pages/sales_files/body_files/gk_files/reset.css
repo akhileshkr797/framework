@@ -1,0 +1,18 @@
+table {
+	margin-top: 5px; margin-bottom: 5px; border-collapse: collapse; border-spacing: 2;
+}
+td {
+	padding: 1px;
+}
+table a:link {
+	text-decoration: none;
+}
+table a:visited {
+	font-weight: bold; text-decoration: underline;
+}
+table a:active {
+	color: rgb(189, 90, 53); text-decoration: underline;
+}
+table a:hover {
+	color: rgb(189, 90, 53); text-decoration: underline;
+}

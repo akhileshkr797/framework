@@ -1,0 +1,21 @@
+body {
+	width: 99%; margin-top: 0px; margin-right: 0px; margin-left: 0px;
+}
+.sweet-alert button {
+	margin: -15px -99px 0px; padding: 5px 15px; border-radius: 5px; border: 1px solid rgb(255, 255, 255); border-image: none; color: white; font-size: 15px; font-weight: bold; background-color: rgb(68, 68, 68);
+}
+.sweet-alert h2 {
+	color: rgb(255, 255, 255); font-size: 14px;
+}
+.sweet-alert {
+	background: rgb(68, 68, 68); border: currentColor; border-image: none; box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+.sweet-alert button:hover {
+	background-color: rgb(102, 102, 102);
+}
+.sweet-alert button.cancel {
+	background-color: rgb(68, 68, 68);
+}
+.sweet-alert button.cancel:hover {
+	background-color: rgb(102, 102, 102);
+}

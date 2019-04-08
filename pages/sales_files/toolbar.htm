@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0050)http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp -->
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+ 
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META http-equiv="Expires" content="0"> 
+<META http-equiv="Pragma" content="no-cache"> 
+<SCRIPT language="JavaScript">
+	var pgmRolodex = 'JUI.ROLODEX';
+	var pgmSearch = 'JUI.SEARCH';
+	var pgmCheckAction = 'JUI.CHECK.ACTION';
+	var pgmExport = 'JUI.EXPORT';
+
+	window.onerror=new Function("return false")
+	top.glow = 1
+	function checkSysMessage(){
+		var ht = (screen.height* 30)/100;
+		var wd = (screen.width * 40)/100; 
+		var url,ret_val;
+
+		if (top.sSystemMessages.length>0){
+				var sTemp=top.sSystemMessages.split(":");
+				for (i=0;i<sTemp.length;i++)
+				{
+					url = top.applURL + "/jsp/app/modal.jsp?ESC=24&first=Y&modalTitle=View Messages&msgid="+sTemp[i];
+					ret_val = window.showModalDialog(url,window, "dialogWidth="+wd+"px;dialogHeight:"+ht+"px;status:no;center:yes;help:no;minimize:0;maximize:no;resizable=1;border:thin;statusbar:no;")
+				}
+			}
+	}
+	function glowBulb(){	
+		if(top.glow == 1){
+			document.getElementById("div_alert").style.backgroundImage="url(/wade6/images/toolbar/alertglow.gif)";
+		}else{
+			document.getElementById("div_alert").style.backgroundImage="url(/wade6/images/toolbar/alert.png)";
+		}	
+		
+	}
+
+
+function showFavorites(sdivId){
+	if (top.content.document.getElementById("rightpane") && top.content.document.getElementById("rightpane").contentWindow.document && top.content.document.getElementById("rightpane").contentWindow.document.forms[0] && top.content.document.getElementById("rightpane").contentWindow.document.forms[0].CHKCHG){
+		if( top.content.document.getElementById("rightpane").contentWindow.document.forms[0].CHKCHG.value == 'C' )	{	
+			//alert("This action is not allowed \n Please click \"Cancel\" button or link ");
+			sweetAlert("","This action is not allowed \n Please click \"Cancel\" button or link ","error");
+			return false;
+		}
+	}//Code added by ESC on 17April07 allow the programer to prevent user exit in middle of some function
+	window.top.IFrameFavourite.location.href="/wade6/jsp/home/favourites.jsp"
+	window.top.showPanel("panelFavorites",1);
+
+}
+</SCRIPT>
+ <LINK href="toolbar_files/title.css" rel="STYLESHEET" type="text/css"> <LINK 
+href="toolbar_files/toolbar.css" rel="STYLESHEET" type="text/css"> <LINK href="toolbar_files/sweetalert.css" 
+rel="stylesheet"> <LINK href="toolbar_files/platinum.css" rel="stylesheet"> 
+<SCRIPT src="toolbar_files/sweetalert.min.js"></SCRIPT>
+ 
+<SCRIPT language="JavaScript" src="toolbar_files/toolbar_new.js"></SCRIPT>
+ 
+<SCRIPT language="javascript" src="toolbar_files/jquery.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT>
+$(document).ready(function(){
+$(window).mousemove(function (e) {
+		if (e.pageY <= 5) {
+			top.checkCloseX = 1;			
+		}else{top.checkCloseX = 0;}
+			//document.getElementById("system_msg").innerHTML="----"+top.checkCloseX;
+			document.getElementById("system_msg").innerHTML;
+	});
+});
+</SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY topmargin="0" leftmargin="0" onload="glowBulb();"><!--IFRAME name="TITLE_IFRAME" id="spliframeid" src="/wade6/jsp/app/alerts.jsp" frameborder="no" width="0" height="0" style="visibility:hidden;"></iframe--> 
+<DIV class="err_msg" id="err_msg" style="left: 350px; top: 20px; width: 420px; height: 15px; padding-left: 5px; border-top-color: currentColor; border-left-color: currentColor; border-top-width: 2px; border-left-width: 2px; border-top-style: inset; border-left-style: inset; z-index: 31; background-color: transparent;">ErrMsg</DIV>
+<DIV id="blockDiv"></DIV>
+<DIV class="header">
+<TABLE width="100%" class="nav">
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV title="Go back to previous page" class="back" onclick="return formSubmit('cancel')"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Back</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Go to the main menu" class="home" onclick="return formSubmit('HOME')"><A 
+      title="Back" 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Home</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Submit this page of data" class="submit" onclick="return formSubmit('submit')"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Submit</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Cancel changes and return to previous window" class="cancel" 
+      onclick="return formSubmit('cancel')"><A href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Cancel</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Display Quick Retrieval Information" class="rolodex" onclick="rolodex()"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Rolodex</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Display a list of records by search criteria" class="search" 
+      onclick="keySearch()"><A href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Search</A>
+      				 </DIV></TD><!--td> 
+				<div class="help" title="Navigation Shortcusts and Help" onClick= "showShortcut('../../admin/docs/ohmwebnavigation.pdf')" >
+					<a href="#" >Help</a>
+				</div>
+			</td-->
+    			 
+    <TD>
+      <DIV title="Search Knowledge Base" class="faq" 
+      onclick="knowledgebase()"><A href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">FAQs</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Version Details" class="aboutus" onclick="return formSubmit('ABOUTUS')"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">About</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Display messages requiring action" class="alert" id="div_alert" 
+      onclick="checkMsg();"><A href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Alerts</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Instant Messaging among Users" class="msg" onclick="checkSysMsg()"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">IM</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Refresh Page" class="refresh" onclick="return formSubmit('REFRESH')"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Refresh</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="View your favorites" class="favorites" onclick="showFavorites()"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Favorites</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="View Current Setting Preferences and Change if necessary" 
+      class="settings" onclick="showEntity()"><A href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Preferences</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Show currently selected printer or change your printer" class="printer" 
+      onclick="showPrinters()"><A href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Printers</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="View your logs" class="logs" onclick="showLogs()"><A href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Logs</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="View your reports" class="reports" onclick="showRpts()"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Reports</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Log to another account" class="logto" onclick="return formSubmit('LOGTO')"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Logto</A>
+      				 </DIV></TD>
+    <TD>
+      <DIV title="Logout and close your session" class="exit" onclick="showConfirm()"><A 
+      href="http://192.168.1.8:8080/wade6/jsp/home/toolbar.jsp#">Logout</A>
+      				 </DIV></TD></TR></TBODY></TABLE>
+<DIV class="nav_msg" style="clear: both;">		GBS&nbsp;&nbsp;&nbsp;
+ OHM-INDIA&nbsp;&nbsp;&nbsp; CCBDX&nbsp;&nbsp;&nbsp; BED&nbsp;&nbsp;&nbsp;
+ CIN&nbsp;&nbsp;&nbsp; 1006&nbsp;&nbsp;&nbsp; OHM SYSTEMS INC.	 
+<DIV id="system_msg" style="text-align: left; padding-right: 20px; float: right;"></DIV></DIV></DIV></BODY></HTML>

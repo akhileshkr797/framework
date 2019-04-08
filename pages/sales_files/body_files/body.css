@@ -1,0 +1,9 @@
+body {
+	margin: 0px; width: 100%; overflow: hidden;
+}
+.lobibox-notify.lobibox-notify-info {
+	font-size: 12px;
+}
+.lobibox-notify.notify-mini .lobibox-notify-title {
+	font-size: 14px;
+}

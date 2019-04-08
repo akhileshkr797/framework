@@ -1,0 +1,75 @@
+.sf-menu {
+	list-style: none; margin: 0px 0px 1em; padding: 0px;
+}
+.sf-menu * {
+	list-style: none; margin: 0px; padding: 0px;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	left: 0px; top: 100%; display: none; position: absolute; z-index: 99;
+}
+.sf-menu > li {
+	float: left;
+}
+.sf-menu li:hover > ul {
+	display: block;
+}
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+.sf-menu a {
+	display: block; position: relative;
+}
+.sf-menu ul {
+	min-width: 12em; box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+.sf-menu ul ul {
+	left: 100%; top: 0px;
+}
+.sf-menu a {
+	padding: 0.75em 1em; color: rgb(17, 51, 170); text-decoration: none; border-top-color: rgba(255, 255, 255, 0.5); border-left-color: rgb(255, 255, 255); border-top-width: 1px; border-left-width: 1px; border-top-style: solid; border-left-style: solid; -ms-zoom: 1;
+}
+.sf-menu li {
+	transition:background 0.2s; white-space: nowrap; -webkit-transition: background .2s;
+}
+.sf-menu ul li {
+	
+}
+.sf-menu ul ul li {
+	background: rgb(154, 174, 219);
+}
+.sf-menu li:hover {
+	background: rgb(207, 222, 255); transition:none; -webkit-transition: none;
+}
+.sf-menu li.sfHover {
+	background: rgb(207, 222, 255); transition:none; -webkit-transition: none;
+}
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+}
+.sf-arrows .sf-with-ul::after {
+	border-width: 5px; border-style: solid; border-color: rgba(255, 255, 255, 0.5) transparent transparent; border-image: none; top: 50%; width: 0px; height: 0px; right: 1em; margin-top: -3px; position: fixed; content: "";
+}
+.sf-arrows > li > .sf-with-ul:focus::after {
+	border-top-color: white;
+}
+.sf-arrows > li:hover > .sf-with-ul::after {
+	border-top-color: white;
+}
+.sf-arrows > .sfHover > .sf-with-ul::after {
+	border-top-color: white;
+}
+.sf-arrows ul .sf-with-ul::after {
+	border-color: transparent transparent transparent rgba(255, 255, 255, 0.5); margin-top: -5px; margin-right: -3px;
+}
+.sf-arrows ul li > .sf-with-ul:focus::after {
+	border-left-color: white;
+}
+.sf-arrows ul li:hover > .sf-with-ul::after {
+	border-left-color: white;
+}
+.sf-arrows ul .sfHover > .sf-with-ul::after {
+	border-left-color: white;
+}

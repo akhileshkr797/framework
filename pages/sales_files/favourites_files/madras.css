@@ -1,0 +1,183 @@
+a {
+	color: rgb(36, 67, 145);
+}
+.actionbutton {
+	background: rgb(204, 99, 102);
+}
+.actionbutton.actionbutton--inverted {
+	background: rgb(204, 99, 102);
+}
+.actionbutton:hover {
+	background-color: rgb(204, 99, 102);
+}
+.actionbutton.actionbutton--inverted:hover {
+	background-color: rgb(204, 99, 102);
+}
+.anchor {
+	background: linear-gradient(rgb(204, 99, 102), rgb(211, 0, 0)) rgb(204, 99, 102);
+}
+.anchor:hover {
+	background: linear-gradient(rgb(211, 0, 0), rgb(204, 99, 102)) rgb(211, 0, 0);
+}
+.b {
+	border-top-color: rgb(136, 68, 68); border-right-color: rgb(136, 68, 68); border-left-color: rgb(136, 68, 68); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: ridge; border-right-style: ridge; border-left-style: ridge;
+}
+body.login {
+	background-color: rgb(224, 248, 255);
+}
+.c1 {
+	border-width: 2px; border-style: outset ridge ridge outset; border-color: rgb(240, 128, 128); background-color: rgb(240, 252, 252);
+}
+.cone {
+	background: rgb(176, 189, 193); border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-width: 1px; border-right-width: 1px; border-top-style: solid; border-right-style: solid; box-shadow: inset 0px 1px 0px #b0bdc1; -webkit-box-shadow: inset -1px 1px 0 #b0bdc1; -moz-box-shadow: inset 0 1px 0 #b0bdc1; -o-box-shadow: inset 0 1px 0 #b0bdc1;
+}
+#div_menu {
+	background: rgb(51, 102, 136);
+}
+font {
+	color: gray;
+}
+.gradient {
+	background: linear-gradient(rgb(204, 99, 102), rgb(204, 134, 143)) rgb(119, 119, 216); height: 20px; color: rgb(255, 255, 255); border-bottom-color: rgb(170, 17, 31); border-bottom-width: 1px; border-bottom-style: solid;
+}
+input {
+	border-color: rgb(204, 99, 102);
+}
+.links a {
+	background: rgb(204, 99, 102);
+}
+.links a {
+	background: rgb(204, 99, 102);
+}
+.links a:hover {
+	background-color: rgb(250, 150, 153);
+}
+#marquee_div {
+	background: rgb(255, 255, 255); border-color: rgb(0, 0, 0); color: rgb(214, 81, 81);
+}
+#menu a:hover {
+	background: rgb(204, 99, 102); color: rgb(255, 255, 255);
+}
+#menu a.active {
+	background: rgb(204, 99, 102); color: rgb(255, 255, 255);
+}
+.menu_title {
+	font: bold 14pt/normal "Arial", "Tahoma", "Sans-Serif"; color: rgb(204, 99, 102); font-size-adjust: none; font-stretch: normal;
+}
+.fav_title {
+	font: bold 14pt/normal "Arial", "Tahoma", "Sans-Serif"; color: rgb(204, 99, 102); font-size-adjust: none; font-stretch: normal;
+}
+.menuTable {
+	color: rgb(0, 0, 0);
+}
+.menuTD {
+	color: rgb(255, 255, 255);
+}
+.menuSelect {
+	color: rgb(255, 255, 255);
+}
+.Outline {
+	color: rgb(255, 255, 255);
+}
+.Modal {
+	border: 2px ridge rgb(34, 34, 34); border-image: none;
+}
+.round-a-gray {
+	background: url("../images/round_gray-left.png") no-repeat left top rgb(68, 68, 68); text-align: center; color: rgb(255, 255, 255);
+}
+.round-a-gray div {
+	background: url("../images/round_gray-right.png") no-repeat right bottom; padding: 10px; border: 1px solid rgb(255, 255, 255); border-image: none; color: rgb(255, 255, 255); font-family: Arial; font-size: 9pt; font-weight: bold;
+}
+.round-a-ok {
+	background: url("../images/round_green-left.png") no-repeat left top rgb(0, 128, 0); text-align: center; color: rgb(255, 255, 255);
+}
+.round-a-ok div {
+	background: url("../images/round_green-right.png") no-repeat right bottom; padding: 10px; border: 1px solid rgb(255, 255, 255); border-image: none; color: rgb(255, 255, 255); font-family: Arial; font-size: 9pt; font-weight: bold;
+}
+.round-a-error {
+	background: url("../images/error.png") no-repeat left content-box border-box rgb(182, 183, 226);
+}
+.ScrollArea {
+	-ms-scrollbar-base-color: rgb(232, 236, 248);
+}
+select {
+	border: 1px solid rgb(204, 99, 102); border-image: none; background-image: url("../images/theme_icon/madrass_dropdown.JPG");
+}
+select:focus {
+	border-color: rgb(204, 99, 102); box-shadow: inset 0px 1px 1px #000, 0px 0px 8px #cc6366; -webkit-box-shadow: 0 1px 1px #000 inset, 0 0 8px #cc6366; -moz-box-shadow: 0 1px 1px #000 inset, 0 0 8px #cc6366;
+}
+input:focus {
+	border-color: rgb(204, 99, 102); box-shadow: inset 0px 1px 1px #000, 0px 0px 8px #cc6366; -webkit-box-shadow: 0 1px 1px #000 inset, 0 0 8px #cc6366; -moz-box-shadow: 0 1px 1px #000 inset, 0 0 8px #cc6366;
+}
+select {
+	border: 1px solid rgb(125, 155, 227); border-image: none; font-size: 8pt;
+}
+.searchbutton {
+	background: url("../images/theme_icon/madrass_search.jpg") rgb(136, 136, 238);
+}
+.sf-menu a {
+	color: rgb(0, 0, 0);
+}
+.sf-menu li {
+	background: url("../images/nav-diagonals.png") rgb(245, 176, 200);
+}
+.sf-menu a:hover {
+	background: url("../images/nav-diagonals.png") rgb(136, 247, 208); color: rgb(0, 0, 0);
+}
+.sf-menu li.sfHover {
+	background: url("../images/nav-diagonals.png") rgb(136, 247, 208); color: rgb(0, 0, 0);
+}
+.sf-menu a::before {
+	background-color: rgb(0, 51, 204);
+}
+.tab.active {
+	background: 0px 0px rgb(255, 251, 252); border-color: rgb(255, 102, 111);
+}
+.tab-container .panel-container {
+	background: rgb(255, 251, 252); border: 1px solid rgb(255, 102, 111); border-image: none;
+}
+.tooltipnew {
+	background: linear-gradient(rgb(176, 189, 193), rgb(255, 255, 255)) rgb(176, 189, 193); border: 1px solid rgb(0, 0, 0); border-image: none; color: rgb(0, 0, 0); box-shadow: 0px 0px 2px 2px #ccc;
+}
+.title {
+	color: rgb(204, 99, 102);
+}
+.title1 {
+	color: rgb(204, 99, 102);
+}
+.title {
+	color: rgb(204, 99, 102);
+}
+.title1 {
+	color: rgb(204, 99, 102);
+}
+.ui-menu .ui-menu-item {
+	background: rgb(51, 102, 136); border-bottom-color: rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.ui-menu .ui-menu-item:hover {
+	background: rgb(204, 99, 102); color: rgb(255, 255, 255);
+}
+.ui-menu .ui-menu-item a:hover {
+	background: rgb(204, 99, 102); color: rgb(255, 255, 255);
+}
+.ui-state-active {
+	background: rgb(204, 99, 102); border: 1px solid white; border-image: none; color: rgb(255, 255, 255);
+}
+.ui-widget-content .ui-state-active {
+	background: rgb(204, 99, 102); border: 1px solid white; border-image: none; color: rgb(255, 255, 255);
+}
+.ui-widget-header .ui-state-active {
+	background: rgb(204, 99, 102); border: 1px solid white; border-image: none; color: rgb(255, 255, 255);
+}
+.ui-icon {
+	background-image: url("../scripts/jquery/themes/base/images/ui-icons_ffffff_256x240.png");
+}
+.ui-widget-content .ui-icon {
+	background-image: url("../scripts/jquery/themes/base/images/ui-icons_ffffff_256x240.png");
+}
+.ui-menu .ui-menu-item *:hover {
+	background: none;
+}
+.ui-widget-content a {
+	color: rgb(255, 255, 255);
+}

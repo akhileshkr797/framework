@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background: #f4f4f4;
+    font-size: 15px;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*global stuff*/
+
+container {
+    width: 100%;
+    margin: auto;
+}
+
+
+/*header*/
+
+header {
+    width: 100%;
+    background: #72D0C8;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+header #branding {
+    margin-left: 3%;
+    float: left;
+    position: relative;
+}
+
+header #branding h1 {
+    text-transform: uppercase;
+    color: rgb(231, 38, 38);
+}
+
+header nav {
+    margin-left: 65%;
+}
+
+ul {
+    list-style: none;
+}
+
+header #ul1 .li1 {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    float: left;
+}
+
+header #ul1 .li1 a {
+    color: rgb(224, 8, 8);
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+header #ul1 .li1 a:hover {
+    color: white;
+}
+
+header #ul1 .li2 {
+    text-align: center;
+}
+
+header #ul1 .li2 a {
+    text-decoration: none;
+    color: rgb(240, 32, 32);
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+header #ul1 .li2 a:hover {
+    color: white;
+}
+
+#bar {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    color: #fff;
+    display: none;
+}
+
+@media screen and (max-width:1044px) {
+    #ul1 {
+        display: none;
+    }
+}
+
+
+/*showcase*/
+
+#showcase {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#showcase figure {
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+#showcase figure img {
+    width: 100%;
+    height: 600px;
+}
+
+#showcase figure #image {
+    background: blue;
+    width: 100%;
+    height: 1000px;
+    opacity: 0.4;
+    position: absolute;
+    bottom: 1%;
+}
+
+#showcase figure figcaption {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    margin: auto;
+    opacity: 1;
+}
+
+#showcase figure #content {
+    width: 70%;
+    min-height: 200px;
+    position: relative;
+    top: 20px;
+    color: #fff;
+    overflow: hidden;
+}
+
+#showcase figure #content p {
+    font-size: 20px;
+}
+
+#showcase figure figcaption h1 {
+    opacity: 1;
+    font-weight: 800;
+    font-size: 40px;
+    color: white;
+    text-transform: capitalize;
+}
+
+#button button {
+    padding: 5px 15px 5px 15px;
+    background: #72D0C8;
+    border: none;
+    outline: none;
+    color: #000000;
+}
+
+#selectProduct {
+    width: 100%;
+    border: 10px solid #72D0C8;
+    box-sizing: border-box;
+}
+
+#selectProduct div {
+    margin: auto;
+}
+
+#selectProduct #examheading h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: red;
+}
+
+#selectProduct #dropdown {
+    width: 5%;
+    display: inline-block;
+    margin-left: 48%;
+}
+
+#selectProduct .boxes {
+    width: 100%;
+    margin: auto;
+}
+
+#selectProduct #box1 {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-left: 5%;
+    text-align: center;
+    position: absolute;
+}
+
+#box2 {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    left: 20%;
+}
+
+#selectProduct .course {
+    width: 150px;
+    min-height: 150px;
+    border: 7px solid #72D0C8;
+    border-radius: 20%;
+}
+
+#selectProduct .course img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+#selectProduct .boxes #courseheading1 {
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+#selectProduct .boxes h1 {
+    background: #72d0c8;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+#selectProduct .boxes p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#selectProduct .boxes button {
+    padding: 10px 20px 10px 20px;
+    background: #72d0c8;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#selectProduct .boxes #contentbox {
+    max-width: 600px;
+    height: 300px;
+    float: left;
+    margin-left: 5%;
+}
+
+#selectProduct .boxes #coursebox {
+    max-width: 400px;
+    height: 300px;
+    margin-left: 60%;
+}
+
+#selectProduct .boxes #coursebox img {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+#selectProduct .boxes #course {
+    width: 40%;
+    height: 50%;
+    border: 8px solid #72d0c8;
+    border-radius: 20%;
+}
+
+#selectProduct .boxes #courseheading2 {
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+#selectProduct .boxes #box3 {
+    max-width: 400px;
+    height: 300px;
+    float: left;
+    margin-left: 10%;
+}
+
+#selectProduct .boxes #box4 {
+    max-width: 600px;
+    height: 300px;
+    margin-left: 50%;
+}
+
+#selectProduct .boxes #courseheading3 {
+    margin-top: 7%;
+    margin-left: 3%;
+}
+
+#getintouch {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#getintouch .boxx {
+    width: 33%;
+    display: block;
+    float: left;
+}
+
+#getintouch .boxx #location {
+    max-width: 250px;
+    margin: auto;
+}
+
+#getintouch .boxx #location img {
+    width: 100%;
+    height: 100%;
+}
+
+#getintouch .boxx #contact h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: red;
+}
+
+#getintouch .boxx #contact table td {
+    font-weight: 700;
+    color: #72d0c8;
+}
+
+#getintouch .boxx #touch h1 {
+    text-align: center;
+    color: red;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+#getintouch .boxx #touch table {
+    margin: auto;
+}
+
+#getintouch .boxx #touch table {
+    border: 2px solid #72d0c8;
+    border-collapse: collapse;
+}
+
+#getintouch .boxx #touch table tr td {
+    border: 2px solid #72d0c8;
+}
+
+#getintouch .boxx #touch table input {
+    padding: 10px 100px 10px 10px;
+    border: none;
+    outline: none;
+}
+
+#getintouch .boxx #touch table textarea {
+    border: none;
+}
+
+#td4 {
+    background: #72d0c8;
+}
+
+#td4 input[type=submit] {
+    padding: 10px 20px 10px 20px;
+    background: #72d0c8;
+    font-size: 25px;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+footer {
+    float: right;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #72d0c8;
+    margin-top: 5%;
+}
+
+footer #container {
+    height: 80px;
+    width: 80%;
+    background-color: white;
+    border-radius: 25px;
+    line-height: 80px;
+    margin-left: 130px;
+    text-align: center;
+}

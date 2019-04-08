@@ -1,0 +1,325 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0085)http://192.168.1.8:8080/wade6/jsp/home/index.jsp -->
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+ 
+<META http-equiv="Expires" content="0"> 
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META http-equiv="Pragma" content="no-cache"> <TITLE>OHMWeb&nbsp;CCBDX</TITLE> 
+<SCRIPT type="text/javascript">
+		window.name="topWindow"
+		var menuString="";
+		var glow = 0;
+		var favorites=false;
+		var log=false;
+		var edit=false;
+		var help=false;
+		var cust=false;
+		var file=false;
+		var ctl =false;
+		var lastMenu = null;
+
+		var titleflag=false;
+		var applURL = '/wade6';
+		var g_appserver = 'TOMCAT';	   	
+		var keys=new Object();
+		var elementProps = new Object();
+		var menuTitle="";
+		var initialMenu = "";
+		var count=0;
+		var g_PN; //to store latest entered partnumber for PN sub-datatype(ODST)
+		var g_ESC="0";
+		var sSystemMessages //to store the  system message ids added by senthil 15-feb-05
+
+		//-----------------------------------------------------------------------------
+		// Values for session Time Out
+		//-----------------------------------------------------------------------------
+		var g_IdleTime=0;
+		var g_TimeOut=30;
+		var g_WarnTime=5;
+
+		function stopError(){
+			return false;
+		}
+		function closeWindow(){
+			window.close();
+		}		
+		menuString='<INPUT TYPE=hidden NAME=holidays VALUE="YýYýYýYýYýNýNþ" >';
+		g_TimeOut=120;
+	</SCRIPT>
+ <LINK href="sales_files/jquery.ui.all.css" rel="stylesheet" type="text/css"> 
+<LINK href="sales_files/sweetalert.css" rel="stylesheet"> <LINK href="sales_files/wade.css" 
+rel="STYLESHEET" type="text/css"> <LINK href="sales_files/index.css" rel="STYLESHEET" 
+type="text/css"> 
+<SCRIPT language="javascript" src="sales_files/jquery.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT language="javascript" src="sales_files/jquery-ui.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="sales_files/jquery.ui.core.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="sales_files/jquery.ui.draggable.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="sales_files/jquery.ui.resizable.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="sales_files/jquery.ui.dialog.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="sales_files/sweetalert.min.js"></SCRIPT>
+ 
+<SCRIPT language="javascript" type="text/javascript">
+var sExcelFlag="";
+var excelFileName="";
+var checkCloseX=1;
+$(document).ready(function(){
+var panFavourite=$("#panelFavorites").dialog({autoOpen: false,draggable:true,resizable:true,width:275,position:['middle',100],modal:false});
+
+var panelLogto=$("#panelLogto").dialog({autoOpen: false,draggable:true,resizable: true,width: 200,modal: true});
+var panelAboutUs=$("#panelAboutUs").dialog({autoOpen: false,draggable:true,resizable: true,width: 200,modal: true});
+var panWait=$("#divWait").dialog({autoOpen: false,draggable:false,resizable: false,width:230,modal: true});
+var panExcel = $("#panelExcel" ).dialog({
+		autoOpen: false,
+		width:350,
+		modal: true,
+		buttons: {		
+			Cancel: function() {
+				panExcel.dialog( "close" );
+			},
+			"Submit": function() {			
+					handleExcel();
+					panExcel.dialog( "close" );
+			}
+		}
+	});
+		//$(document.body).on("keydown", this, function (event) {
+		$(document).bind('keypress keydown keyup', function(e) {
+			if (event.keyCode == 116) {
+				checkCloseX = 0;
+			}
+		});
+       /* window.onbeforeunload = function (event) {
+            if (event) {
+                if (checkCloseX == 1) {                    
+                    $.ajax({
+						async: false,
+                        type: "GET",
+                        url: top.applURL +  "/jsp/login/logout.jsp",
+                        success: function (result) {
+                            if (result != null) {
+                            }
+                        }
+                    });
+                }
+            }
+        };*/
+});
+function handleExcel(){
+	var isText=document.frmExcel.excelFormat.value;
+	var excelMultipleValue=document.frmExcel.excelMultipleValue.value;
+	var fileName=document.frmExcel.fileName.value;
+	var pageFlag=document.frmExcel.excelPage.value;
+	var t=new Date().getTime();
+		
+	var funcname=top.content.document.getElementById("rightpane").contentWindow.pdfFunction;			
+	var ip1=top.content.document.getElementById("rightpane").contentWindow.pdfIP1;
+	var ip2=top.content.document.getElementById("rightpane").contentWindow.pdfIP2;
+	var ip3=top.content.document.getElementById("rightpane").contentWindow.pdfIP3;
+
+	if (pageFlag=="A"){
+		sURL= applURL +"/jsp/app/genExcel.jsp?isText=" + isText + "&funcname=" + funcname + "&ip1=" + ip1 + "&ip2="+ip2+"&ip3="+ip3+"&excelMultipleValue="+excelMultipleValue+"&fileName=&page="+pageFlag+"&time="+t;
+		$.ajax({
+			  url: sURL,
+			type: "get"
+		}); 
+		alert("Excel file will be sent to your Reports folder");
+	}else{
+
+		var panelwin="";
+		if (top.content.rightpane.contentWindow){
+			panelwin=top.content.rightpane.contentWindow;			
+		}else{
+			panelwin=top.content.rightpane;		 	
+		}
+		var temp = panelwin.document.body.innerHTML;
+		var strMsg=$(panelwin.document.body).clone().find("script,noscript,style,iframe,EMAILFILTER,input,ul,img,#err_msg").remove().end().html();
+		pos1=strMsg.indexOf("<!--END-->");
+		if (pos1>0){
+			strMsg=strMsg.substring(0,pos1);
+		}
+		strMsg=strMsg.replace(/\n|\r/g, "");
+		strMsg=strMsg.replace("textarea", "div");
+		sURL=applURL+"/jsp/app/genExcel.jsp";
+		var inputs="<input type='hidden' id='excel_body' name='excel_body' value=''><input type='hidden' id='excelMultipleValue' name='excelMultipleValue' value='"+excelMultipleValue+"'><input type='hidden' name='fileName' id='fileName' value='"+fileName+"'><input type='hidden' name='isText' id='isText' value='"+isText+"'>"
+		
+		var oform=$('<form action="'+ sURL +'" method="post" id="frm_EXCEL">'+inputs+'</form>').appendTo('body');
+		$('#excel_body').val(strMsg);
+		oform.submit().remove();
+	}
+}
+function showPanel(sName,sFlag){
+	var sPanel="#"+sName;
+	if (sFlag==1){
+			$(sPanel).dialog("open");
+		}else{
+			$(sPanel).dialog("close");
+		}
+}
+function logto(accpath){			
+		top.content.document.getElementById("tblBody").rows[0].cells[0].width='1px';
+		top.content.document.getElementById("tblBody").rows[0].cells[1].width='100%';
+		if (top.content.rightpane.contentDocument){
+			checkCloseX = 0;
+			top.content.rightpane.contentDocument.location.href = top.applURL +  "/jsp/login/logtoaccount.jsp?LogTo=true&WindowName="+top.name+"&accpath="+accpath;
+		}else{
+			checkCloseX = 0;
+			top.content.rightpane.location.href = top.applURL +  "/jsp/login/logtoaccount.jsp?LogTo=true&WindowName="+top.name+"&accpath="+accpath;
+		}
+		window.top.showPanel("panelLogto",0);
+		window.top.showPanel("divWait",1);
+}	
+//Function added to handle window closing issue withou clicking on exit button by ESC on 20May06
+function HandleOnClose(e) {
+/*	var evt=(e)?e:(window.event)?window.event:null;
+   if (evt.clientY < 0) {
+			$.ajax({
+			  url: top.applURL +  "/jsp/login/logout.jsp",
+			  type: "get"
+			}); 
+   }
+ 
+   if (top.checkCloseX==0){
+	   	$.ajax({
+			  url: top.applURL +  "/jsp/login/logout.jsp",
+			  type: "get"
+		}); 
+   }*/
+}
+function resizeIframe(){
+	var contentHeight=$("#rightpane").contents().find('body').height()+20;
+	$("#rightpane").height(contentHeight);
+}
+//Sweet Alert pop up function added by Abhi 
+function newPopup(alertMsg){
+	var msg = alertMsg;
+	sweetAlert(msg);
+	document.getElementByClassName("confirm").focus();
+	return;
+}
+//Sweet Alert pop up logout function added by Abhi 
+function newLogout(msg){
+	swal({
+			  title: msg,
+			  type: "warning",
+			  showCancelButton: true,
+			  confirmButtonColor: "#DD6B55",
+			  confirmButtonText: "Yes",
+			  closeOnConfirm: false
+		},
+		function(){
+				 top.location.href = top.applURL +  "/jsp/login/logout.jsp";
+			});
+}
+ 
+</SCRIPT>
+ <!-- Added by Abhi to eliminate scroll bar for IE in bottom of the page 23/6/15 --> <!--[if !IE]><!--> 
+<STYLE>
+	body{
+	width:100%;
+	}
+</STYLE>
+  <!--<![endif]-->	
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD>	<!--22-02-2018 <body SCROLL="NO" onbeforeunload="HandleOnClose(event)" > --> <!-- <body style="overflow: hidden;" onbeforeunload="HandleOnClose(event)" > --> 
+<BODY style="overflow: hidden;">
+<TABLE width="100%" height="100%" id="tblHolder" border="0" cellspacing="0" 
+cellpadding="0">
+  <TBODY>
+  <TR>
+    <TD width="100%" height="70"><IFRAME name="title" width="100%" height="80" 
+      id="title" src="sales_files/toolbar.htm" frameborder="0" 
+      noresize=""></IFRAME>		 </TD></TR>
+  <TR>
+    <TD width="100%" height="100%"><IFRAME name="content" width="100%" height="100%" 
+      id="content" src="sales_files/body.htm" frameborder="0" noresize="" style="border-width: 0px 2px 2px; border-style: none solid solid; border-color: currentColor rgb(238, 238, 238) rgb(238, 238, 238); border-image: none;"></IFRAME>
+      		 </TD></TR></TBODY></TABLE><!-- DIV to display the Please Wait Message----> 
+<DIV title="Loading, please wait..." id="divWait">
+<DIV><IMG src="sales_files/loading.gif">	 </DIV></DIV><!-- End of Please Wait Message DIV----> <!-- DIV to display the floating favorities-----> 
+<DIV title="&nbsp;Favorites&nbsp;&nbsp;&nbsp;" id="panelFavorites" style="background-color: transparent;">
+<DIV class="bd" style="background-color: transparent;"><IFRAME name="IFrameFavourite" 
+width="98%" height="350" id="IFrameFavourite" src="sales_files/favourites.htm" 
+border="0" frameborder="0" noresize="" allowtransparency="true"></IFRAME>
+	 </DIV></DIV><!-- End of floating favorities DIV-----> <!-- DIV to display the logto-----> 
+<DIV title="&nbsp;Logto&nbsp;&nbsp;&nbsp;" id="panelLogto">
+<DIV class="bd" style="overflow: auto;">
+<TABLE width="100%" class="logtoTable" border="0" cellspacing="0">
+  <TBODY>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('AOT')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">AOT</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('BLUE_BELL')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">BLUE_BELL</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('CCBDX')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">CCBDX</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('CCCOM')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">CCCOM</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('CCERP')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">CCERP</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('CCMOB')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">CCMOB</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('CLASS')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">CLASS</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('DEV')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">DEV</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('DEVBDX')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">DEVBDX</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('GBS')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">GBS</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('OHMBDX')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">OHMBDX</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('OHMCOM')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">OHMCOM</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('OHMERP')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">OHMERP</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('OSSC')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">OSSC</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('OWL')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">OWL</A></TD></TR>
+  <TR>
+    <TD class="logtoTD"><A onclick="logto('WITS')" href="http://192.168.1.8:8080/wade6/jsp/home/index.jsp?accountName=CCBDX&amp;time=1550483554130#">WITS</A></TD></TR></TBODY></TABLE></DIV></DIV><!-- End of logto DIV-----> <!-- DIV to display the Release Notes-----> 
+<DIV title="&nbsp;Release Notes&nbsp;&nbsp;&nbsp;" id="panelAboutUs">
+<DIV class="bd">
+<TABLE width="100%" class="logtoTable" border="0" cellspacing="0">
+  <TBODY>
+  <TR>
+    <TD class="logtoTD">OWL Release 6.0<BR>CCBDX Release 6.3<BR>Last Patch 
+      Loaded 3688</TD></TR>
+  <TR>
+    <TD class="logtoTD"> Middleware Version 
+6.0</TD></TR></TBODY></TABLE></DIV></DIV><!-- End of Release Notes DIV-----> <!-- Email form--> 
+<DIV id="panelEmail" style="display: none;">
+<FORM name="frmEmail" id="frmEmail" action="#" method="POST"><TEXTAREA name="wadeba" id="wadeba"> </TEXTAREA>
+	 <INPUT name="emailsub" type="submit" value="send mail">   </FORM></DIV><!-- Export to Excel Panel --> 
+<DIV title="Export to Excel Setting" id="panelExcel" style="display: none;">
+<DIV class="bd">
+<FORM name="frmExcel" action="#" method="POST">
+<TABLE border="0" cellspacing="2" cellpadding="2">
+  <TBODY>
+  <TR>
+    <TD><LABEL for="excelFormat">All Data Be Treated As</LABEL></TD>
+    <TD>&nbsp;</TD>
+    <TD><INPUT name="excelFormat" type="radio" checked="" value="Y"> Text			   
+      <INPUT name="excelFormat" type="radio" value="N">   Numeric</TD></TR>
+  <TR>
+    <TD><LABEL for="excelMultipleValue">Excel Multi Value Option</LABEL></TD>
+    <TD>&nbsp;</TD>
+    <TD><SELECT name="excelMultipleValue"><OPTION value="yes">Single 
+        Cells</OPTION>				 <OPTION value="no">Separate Cells</OPTION>			   
+      </SELECT></TD></TR>
+  <TR>
+    <TD><LABEL for="excelPage">Page Option</LABEL></TD>
+    <TD>&nbsp;</TD>
+    <TD><SELECT name="excelPage"><OPTION value="C">Current Page</OPTION>
+        				 <OPTION value="A">All Pages</OPTION>			   </SELECT></TD></TR>
+  <TR>
+    <TD><LABEL for="fileName">Enter Excel File Name</LABEL></TD>
+    <TD>&nbsp;</TD>
+    <TD><INPUT name="fileName" type="text" value="\\sample.xls"></TD></TR></TBODY></TABLE></FORM></DIV></DIV>
+<SCRIPT language="javascript">
+	document.frmExcel.excelMultipleValue.value="no";
+</SCRIPT>
+ </BODY></HTML>

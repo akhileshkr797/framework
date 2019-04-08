@@ -1,0 +1,105 @@
+a {
+	color: black; cursor: hand;
+}
+a:link {
+	color: black; text-decoration: none;
+}
+a:visited {
+	color: black; text-decoration: none;
+}
+a:hover {
+	color: blue; text-decoration: none;
+}
+a:active {
+	color: rgb(187, 0, 94); text-decoration: none;
+}
+.access {
+	text-decoration: underline;
+}
+body {
+	margin: 0px;
+}
+.borders {
+	border-right-color: rgb(255, 255, 254); border-left-color: rgb(255, 255, 254); border-right-width: 2px; border-left-width: 2px; border-right-style: groove; border-left-style: groove;
+}
+.bordersl {
+	border-left-color: rgb(255, 255, 254); border-left-width: 2px; border-left-style: groove;
+}
+.bordersr {
+	border-right-color: rgb(255, 255, 254); border-right-width: 2px; border-right-style: groove;
+}
+.borderr {
+	border-right-color: rgb(129, 129, 129); border-right-width: 2px; border-right-style: ridge;
+}
+#blockDiv {
+	visibility: visible; background-color: rgb(197, 197, 197);
+}
+.clsMenuItemNS {
+	color: black; text-decoration: none; cursor: hand;
+}
+.clsMenuItemIE {
+	color: black; text-decoration: none; cursor: hand;
+}
+.err_msg {
+	width: 99px; height: 36px; visibility: hidden; position: absolute; background-color: rgb(197, 197, 197);
+}
+.error {
+	color: rgb(221, 0, 0); font-family: Arial; font-size: 8pt; font-weight: bold;
+}
+font {
+	color: black; font-family: Arial; font-size: 7pt; align: left;
+}
+.green {
+	color: rgb(51, 102, 0); font-family: Arial; font-size: 10pt; align: left;
+}
+.gray {
+	color: rgb(0, 8, 136); font-family: Arial; font-size: 9pt; align: left;
+}
+input {
+	height: 18px; font-family: Arial; font-size: 8pt;
+}
+.inf {
+	color: black; font-weight: bold;
+}
+li {
+	color: black; line-height: 10pt; font-family: Arial; font-size: 9pt;
+}
+.logout {
+	font-family: Arial; font-size: 10pt;
+}
+.purple {
+	color: purple; font-family: Arial; font-size: 9pt; align: left;
+}
+.red {
+	color: rgb(255, 0, 80);
+}
+.separator {
+	border-left-color: rgb(255, 255, 255); border-left-width: 0px; border-left-style: groove;
+}
+.test {
+	font-face: arial;
+}
+.tooltip {
+	background: rgb(255, 255, 208); padding: 1px; border: 1px solid rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 8pt; display: none; position: absolute;
+}
+td.border {
+	border-width: 2px; border-style: outset ridge ridge outset; border-color: white rgb(200, 200, 200) rgb(200, 200, 200) white;
+}
+tr.border {
+	border-width: 3px 3px 2px 2px; border-style: outset ridge ridge outset; border-color: white rgb(200, 200, 200) rgb(200, 200, 200) white;
+}
+table.b {
+	border-bottom-color: rgb(247, 247, 247); border-left-color: rgb(237, 237, 237); border-bottom-width: 2px; border-left-width: 2px; border-bottom-style: groove; border-left-style: solid;
+}
+td.border1 {
+	border-width: 2px; border-style: groove inset inset groove; border-color: rgb(197, 197, 197) white white rgb(197, 197, 197);
+}
+td {
+	font-family: Arial; font-size: 7pt;
+}
+.tableborder {
+	border-width: 1px 0px; border-style: ridge outset; border-color: rgb(180, 180, 180) white rgb(200, 200, 200);
+}
+ul {
+	margin-top: 0px; margin-left: 25pt;
+}

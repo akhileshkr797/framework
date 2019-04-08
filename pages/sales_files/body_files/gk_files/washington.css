@@ -1,0 +1,192 @@
+a {
+	color: rgb(36, 67, 145); font-size: 9pt;
+}
+.actionbutton {
+	background: rgb(153, 51, 102);
+}
+.actionbutton.actionbutton--inverted {
+	background: rgb(153, 51, 102);
+}
+.actionbutton:hover {
+	background-color: rgb(153, 51, 102);
+}
+.actionbutton.actionbutton--inverted:hover {
+	background-color: rgb(153, 51, 102);
+}
+.anchor {
+	background: linear-gradient(rgb(153, 51, 102), rgb(169, 55, 89)) rgb(153, 51, 102);
+}
+.anchor:hover {
+	background: linear-gradient(rgb(169, 55, 89), rgb(153, 51, 102)) rgb(169, 55, 89);
+}
+.b {
+	border-top-color: rgb(214, 38, 102); border-right-color: rgb(214, 38, 102); border-left-color: rgb(214, 38, 102); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: ridge; border-right-style: ridge; border-left-style: ridge;
+}
+body.login {
+	background-color: rgb(255, 244, 248);
+}
+.c1 {
+	border-width: 2px; border-style: outset ridge ridge outset; border-color: rgb(192, 128, 160); background-color: rgb(255, 248, 252);
+}
+.cone {
+	background: rgb(255, 222, 229); border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-width: 1px; border-right-width: 1px; border-top-style: solid; border-right-style: solid; box-shadow: inset 0px 1px 0px #ffdee5; -webkit-box-shadow: inset -1px 1px 0 #ffdee5; -moz-box-shadow: inset 0 1px 0 #ffdee5; -o-box-shadow: inset 0 1px 0 #ffdee5;
+}
+#div_menu {
+	background: rgb(252, 244, 248);
+}
+.gradient {
+	background: linear-gradient(rgb(187, 85, 136), rgb(153, 51, 102)) rgb(136, 187, 238); height: 20px; color: rgb(255, 255, 255); border-bottom-color: rgb(119, 17, 68); border-bottom-width: 1px; border-bottom-style: solid;
+}
+input {
+	border: 1px solid rgb(153, 51, 102); border-image: none;
+}
+.links a {
+	background: rgb(153, 51, 102);
+}
+.links a {
+	background: rgb(153, 51, 102);
+}
+.links a:hover {
+	background-color: rgb(255, 151, 203);
+}
+#marquee_div {
+	background: linear-gradient(rgb(255, 233, 245), rgb(255, 255, 255)) rgb(255, 233, 245); color: rgb(0, 0, 0);
+}
+#menu a:hover {
+	background: rgb(153, 51, 102); color: rgb(255, 255, 255);
+}
+#menu a.active {
+	background: rgb(153, 51, 102); color: rgb(255, 255, 255);
+}
+.menu_title {
+	font: bold 14pt/normal "Arial", "Tahoma", "Sans-Serif"; color: rgb(153, 51, 102); font-size-adjust: none; font-stretch: normal;
+}
+.fav_title {
+	font: bold 14pt/normal "Arial", "Tahoma", "Sans-Serif"; color: rgb(153, 51, 102); font-size-adjust: none; font-stretch: normal;
+}
+.menuTable {
+	color: rgb(51, 60, 56);
+}
+.menuTD {
+	padding: 2px; color: rgb(0, 0, 51);
+}
+.menuSelect {
+	color: rgb(255, 255, 255);
+}
+.Outline {
+	color: rgb(255, 255, 255);
+}
+.Modal {
+	background-color: rgb(255, 240, 248);
+}
+.olinks ul li {
+	border: currentColor; border-image: none; color: rgb(255, 255, 255); display: inline-block;
+}
+.olinks a {
+	border: currentColor; border-image: none; color: rgb(255, 255, 255); display: inline-block;
+}
+.olinks :visited {
+	border: currentColor; border-image: none; color: rgb(255, 255, 255); display: inline-block;
+}
+.olinks :hover {
+	color: rgb(255, 255, 255);
+}
+.round-a-gray {
+	background: url("../images/round_gray-left.png") no-repeat left top rgb(68, 68, 68); text-align: center; color: rgb(255, 255, 255);
+}
+.round-a-gray div {
+	background: url("../images/round_gray-right.png") no-repeat right bottom; padding: 10px; border: 1px solid rgb(255, 255, 255); border-image: none; color: rgb(255, 255, 255); font-family: Arial; font-size: 9pt; font-weight: bold;
+}
+.round-a-ok {
+	background: url("../images/round_green-left.png") no-repeat left top rgb(0, 128, 0); text-align: center; color: rgb(255, 255, 255);
+}
+.round-a-ok div {
+	background: url("../images/round_green-right.png") no-repeat right bottom; padding: 10px; border: 1px solid rgb(255, 255, 255); border-image: none; color: rgb(255, 255, 255); font-family: Arial; font-size: 9pt; font-weight: bold;
+}
+.round-a-error {
+	background: url("../images/error.png") no-repeat left content-box border-box rgb(238, 150, 181);
+}
+.ScrollArea {
+	-ms-scrollbar-base-color: rgb(254, 240, 248);
+}
+select {
+	border: 1px solid rgb(153, 51, 102); border-image: none; background-image: url("../images/theme_icon/washington_dropdown.JPG");
+}
+select:focus {
+	border-color: rgb(253, 165, 209); box-shadow: inset 0px 1px 1px #000, 0px 0px 8px #fda5d1; -webkit-box-shadow: 0 1px 1px #000 inset, 0 0 8px #FDA5D1; -moz-box-shadow: 0 1px 1px #000 inset, 0 0 8px #FDA5D1;
+}
+input:focus {
+	border-color: rgb(253, 165, 209); box-shadow: inset 0px 1px 1px #000, 0px 0px 8px #fda5d1; -webkit-box-shadow: 0 1px 1px #000 inset, 0 0 8px #FDA5D1; -moz-box-shadow: 0 1px 1px #000 inset, 0 0 8px #FDA5D1;
+}
+.searchbutton {
+	background: url("../images/theme_icon/washington_search.jpg") rgb(136, 136, 238);
+}
+.sf-menu a {
+	color: rgb(255, 255, 255);
+}
+.sf-menu li {
+	background: url("../images/nav-diagonals.png") rgb(51, 153, 102);
+}
+.sf-menu a:hover {
+	background: url("../images/nav-diagonals.png") rgb(169, 196, 183); color: rgb(0, 0, 0);
+}
+.sf-menu li.sfHover {
+	background: url("../images/nav-diagonals.png") rgb(51, 153, 102); color: rgb(255, 255, 255);
+}
+.sf-menu a::before {
+	background-color: rgb(0, 51, 204);
+}
+.tab.active {
+	background: 0px 0px rgb(255, 248, 252); border-color: rgb(255, 102, 187);
+}
+.tab-container .panel-container {
+	background: rgb(255, 248, 252); border: 1px solid rgb(255, 102, 187); border-image: none;
+}
+.title {
+	color: rgb(153, 51, 102);
+}
+.title1 {
+	color: rgb(153, 51, 102);
+}
+.title {
+	color: rgb(153, 51, 102);
+}
+.title1 {
+	color: rgb(153, 51, 102);
+}
+.tooltiplayer {
+	border-color: rgb(153, 51, 102);
+}
+.tooltipnew {
+	background: linear-gradient(rgb(255, 222, 229), rgb(255, 255, 255)) rgb(255, 222, 229); border: 1px solid rgb(0, 0, 0); border-image: none; color: rgb(0, 0, 0); box-shadow: 0px 0px 2px 2px #ccc;
+}
+.ui-menu .ui-menu-item {
+	background: rgb(252, 244, 248); border-bottom-color: rgb(139, 140, 140); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.ui-menu .ui-menu-item:hover {
+	background: rgb(153, 51, 102); color: rgb(255, 255, 255);
+}
+.ui-menu .ui-menu-item a:hover {
+	background: rgb(153, 51, 102); color: rgb(255, 255, 255);
+}
+.ui-state-active {
+	background: rgb(153, 51, 102); border: 1px solid white; border-image: none; color: rgb(255, 255, 255);
+}
+.ui-widget-content .ui-state-active {
+	background: rgb(153, 51, 102); border: 1px solid white; border-image: none; color: rgb(255, 255, 255);
+}
+.ui-widget-header .ui-state-active {
+	background: rgb(153, 51, 102); border: 1px solid white; border-image: none; color: rgb(255, 255, 255);
+}
+.ui-icon {
+	background-image: url("../scripts/jquery/themes/base/images/ui-icons_222222_256x240.png");
+}
+.ui-widget-content .ui-icon {
+	background-image: url("../scripts/jquery/themes/base/images/ui-icons_222222_256x240.png");
+}
+.ui-menu .ui-menu-item *:hover {
+	background: none;
+}
+.ui-widget-content a {
+	color: rgb(0, 0, 0);
+}

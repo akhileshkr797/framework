@@ -1,0 +1,123 @@
+.context-menu-theme-default {
+	border: 2px outset white; border-image: none; background-color: rgb(212, 208, 200);
+}
+.context-menu-theme-default .context-menu-item {
+	padding: 4px 28px 4px 16px; text-align: left; color: black; font-family: Tahoma,Arial; font-size: 11px; cursor: pointer;
+}
+.context-menu-theme-default .context-menu-separator {
+	margin: 4px 2px; font-size: 0px; border-top-color: rgb(128, 128, 128); border-bottom-color: white; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.context-menu-theme-default .context-menu-item-disabled {
+	color: rgb(128, 128, 128);
+}
+.context-menu-theme-default .context-menu-item .context-menu-item-inner {
+	background: fixed no-repeat 999px 999px;
+}
+.context-menu-theme-default .context-menu-item-hover {
+	color: white; background-color: rgb(10, 36, 106);
+}
+.context-menu-theme-default .context-menu-item-disabled-hover {
+	background-color: rgb(10, 36, 106);
+}
+.context-menu-theme-xp {
+	background: url("images/cmenu-xp-bg.gif") repeat-y left top rgb(249, 248, 247); padding: 1px; border: 1px solid rgb(102, 102, 102); border-image: none;
+}
+.context-menu-theme-xp .context-menu-separator {
+	margin: 4px 2px; font-size: 0px; border-top-color: rgb(128, 128, 128); border-bottom-color: white; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.context-menu-theme-xp .context-menu-item {
+	text-align: left; color: black; font-family: arial; font-size: 11px; cursor: pointer;
+}
+.context-menu-theme-xp .context-menu-item .context-menu-item-inner {
+	background: no-repeat 2px; padding: 4px 10px 4px 30px;
+}
+.context-menu-theme-xp .context-menu-item-hover .context-menu-item-inner {
+	background: no-repeat 2px rgb(182, 189, 210); padding: 3px 9px 3px 29px; border: 1px solid rgb(10, 36, 106); border-image: none;
+}
+.context-menu-theme-vista {
+	background: url("images/cmenu-vista-bg.gif") repeat-y left top rgb(250, 250, 250); border: 1px solid rgb(134, 134, 134); border-image: none;
+}
+.context-menu-theme-vista .context-menu-item {
+	text-align: left; color: black; font-family: Tahoma,Arial; font-size: 11px; cursor: pointer;
+}
+.context-menu-theme-vista .context-menu-separator {
+	margin: 0px 0px 0px 32px; font-size: 0px; border-top-color: rgb(197, 197, 197); border-bottom-color: rgb(245, 245, 245); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.context-menu-theme-vista .context-menu-item-hover {
+	background: url("images/cmenu-vista-menu-item-hover.gif") repeat-x left; border: 1px solid rgb(215, 208, 179); border-image: none;
+}
+.context-menu-theme-vista .context-menu-item .context-menu-item-inner {
+	background-position: 3px; padding: 4px 16px 4px 35px; margin-left: 1px; background-image: none; background-repeat: no-repeat;
+}
+.context-menu-theme-vista .context-menu-item-hover .context-menu-item-inner {
+	padding: 3px 15px 3px 35px; margin-left: 0px;
+}
+.context-menu-theme-vista .context-menu-item-disabled {
+	color: rgb(167, 167, 167);
+}
+.context-menu-theme-osx {
+	border: 1px solid rgb(178, 178, 178); border-image: none; -ms-zoom: 1; opacity: 0.93; background-color: white;
+}
+.context-menu-theme-osx .context-menu-item {
+	text-align: left; color: black; font-family: Lucida Grande,Arial; font-size: 12px; font-weight: 700; z-index: 1; cursor: pointer; opacity: 1;
+}
+.context-menu-theme-osx .context-menu-separator {
+	margin: 5px 1px 4px; font-size: 0px; border-top-color: rgb(228, 228, 228); border-top-width: 1px; border-top-style: solid;
+}
+.context-menu-theme-osx .context-menu-item-hover {
+	color: white; background-color: rgb(28, 68, 242);
+}
+.context-menu-theme-osx .context-menu-item .context-menu-item-inner {
+	background-position: 4px; padding: 2px 10px 2px 22px; background-image: none; background-repeat: no-repeat;
+}
+.context-menu-theme-osx .context-menu-item-disabled {
+	color: rgb(147, 147, 147);
+}
+.context-menu-theme-human {
+	background: rgb(249, 245, 242); border: 1px solid rgb(153, 102, 51); border-image: none;
+}
+.context-menu-theme-human .context-menu-item {
+	border-width: 1px 0px; border-style: solid none; border-color: rgb(249, 245, 242) currentColor; border-image: none; height: 28px; text-align: left; color: black; line-height: 20px; font-family: Helvetica,DejaVu Sans,Arial; font-size: 12px; cursor: pointer;
+}
+.context-menu-theme-human .context-menu-separator {
+	margin: 0px 0px 0px 32px; font-size: 0px; border-top-color: rgb(197, 197, 197); border-bottom-color: rgb(245, 245, 245); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.context-menu-theme-human .context-menu-item-hover {
+	background: url("images/cmenu-human-menu-item-hover.gif") repeat-x left; border-color: rgb(153, 102, 51);
+}
+.context-menu-theme-human .context-menu-item .context-menu-item-inner {
+	background-position: 3px; padding: 4px 16px 4px 35px; margin-left: 0px; background-image: none; background-repeat: no-repeat;
+}
+.context-menu-theme-human .context-menu-item-hover .context-menu-item-inner {
+	
+}
+.context-menu-theme-human .context-menu-item-disabled {
+	color: rgb(167, 167, 167);
+}
+.context-menu-theme-gloss {
+	background: url("images/cmenu-gloss-bg.gif") repeat-y left rgb(244, 244, 244); padding: 1px 0px 1px 1px; border: 1px solid rgb(244, 244, 244); border-image: none;
+}
+.context-menu-theme-gloss .context-menu-item {
+	border: 1px solid transparent; border-image: none; height: 27px; text-align: left; color: black; line-height: 20px; font-family: Helvetica,DejaVu Sans,Arial; font-size: 12px; cursor: pointer;
+}
+.context-menu-theme-gloss .context-menu-separator {
+	margin: 0px 0px 0px 32px; font-size: 0px; border-top-color: rgb(197, 197, 197); border-bottom-color: rgb(245, 245, 245); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.context-menu-theme-gloss .context-menu-item-hover {
+	background: url("images/cmenu-gloss-menu-item-hover.gif") repeat-x left; border-color: rgb(0, 0, 0); border-radius: 3px; color: rgb(255, 255, 255); -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.context-menu-theme-gloss .context-menu-item .context-menu-item-inner {
+	background-position: 3px; padding: 4px 16px 4px 35px; margin-left: 0px; background-image: none; background-repeat: no-repeat;
+}
+.context-menu-theme-gloss .context-menu-item-hover .context-menu-item-inner {
+	
+}
+.context-menu-theme-gloss .context-menu-item-disabled {
+	color: rgb(167, 167, 167);
+}
+.context-menu-theme-gloss-cyan .context-menu-item-hover {
+	border-color: rgb(0, 0, 204); background-image: url("images/cmenu-gloss-cyan-menu-item-hover.gif");
+}
+.context-menu-theme-gloss-semitransparent .context-menu-item-hover {
+	border-color: rgb(0, 0, 204); background-image: url("images/cmenu-item-gloss-semitransparent-menu-item-hover.png"); background-color: rgb(51, 0, 255);
+}

@@ -1,0 +1,237 @@
+@font-face {
+	font-family: OpenSans-Regular;
+	src: url(../fonts/OpenSans-Regular.ttf) format("opentype");
+}
+@font-face {
+	font-family: RobotoSlab-Regular;
+	src: url(../fonts/RobotoSlab-Regular.ttf) format("opentype");
+}
+@font-face {
+	font-family: lato;
+	src: url(../fonts/Lato-Regular.ttf) format("opentype");
+}
+body {
+	margin: 0px; height: 100%; font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif"; font-size: 62.5%;
+}
+#div_menu {
+	float: left; min-height: 100vh;
+}
+#div_favourites {
+	margin-left: 250px; float: left;
+}
+.favInput {
+	padding: 0px 6px; border-radius: 4px; border: 1px solid rgb(113, 113, 113); border-image: none; width: 200px; height: 20px; font-family: RobotoSlab-Regular; font-size: 12px; margin-right: 10px;
+}
+.favInput:focus {
+	border-color: rgb(102, 175, 233); outline: 0px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102,175,233,0.6);
+}
+.favOuter {
+	border-radius: 5px; border: 1px solid rgb(180, 182, 199); border-image: none;
+}
+.favTD {
+	font-family: RobotoSlab-Regular; font-size: 12px; border-bottom-color: rgb(180, 182, 199);
+}
+.favTD a {
+	text-decoration: none;
+}
+.favTD a {
+	color: rgb(0, 0, 102);
+}
+.favTD a:visited {
+	color: rgb(0, 0, 102);
+}
+.favTD a:hover {
+	color: rgb(51, 51, 204);
+}
+.fav_title {
+	font: bold 12pt/normal RobotoSlab-Regular; color: rgb(53, 69, 196); font-size-adjust: none; font-stretch: normal;
+}
+.menu-icon {
+	top: 0.2em; width: 12px; height: 16px; overflow: hidden; padding-right: 5px; margin-right: 5px; margin-left: 2px; float: left; display: block; position: relative; background-image: url("../images/menu/black-ball.gif"); background-repeat: no-repeat;
+}
+.menu-icon-bedding {
+	background-image: url("../images/menu/bedding.png");
+}
+.menu-icon-quality {
+	background-image: url("../images/menu/qualityassurence.png");
+}
+.menu-icon-inventory {
+	background-image: url("../images/menu/inventory.png");
+}
+.menu-icon-physical-inventory {
+	background-image: url("../images/menu/inventory.png");
+}
+.menu-icon-cycle-count {
+	background-image: url("../images/menu/cycle_count.png");
+}
+.menu-icon-purchasing {
+	background-image: url("../images/menu/purchase.png");
+}
+.menu-icon-production-tracking {
+	background-image: url("../images/menu/product_tracking.png");
+}
+.menu-icon-materialplanning {
+	background-image: url("../images/menu/materialplanning.png");
+}
+.menu-icon-capcityplanning {
+	background-image: url("../images/menu/capcityplanning.png");
+}
+.menu-icon-labor {
+	background-image: url("../images/menu/labor.png");
+}
+.menu-icon-timeandatten {
+	background-image: url("../images/menu/timeandatten.png");
+}
+.menu-icon-salesorder {
+	background-image: url("../images/menu/salesorder.png");
+}
+.menu-icon-salespricing {
+	background-image: url("../images/menu/salespricing.png");
+}
+.menu-icon-customerret {
+	background-image: url("../images/menu/customerret.png");
+}
+.menu-icon-salesanalysis {
+	background-image: url("../images/menu/salesanalysis.png");
+}
+.menu-icon-prospect {
+	background-image: url("../images/menu/prospect.png");
+}
+.menu-icon-customerservice {
+	background-image: url("../images/menu/customerservice.png");
+}
+.menu-icon-payroll {
+	background-image: url("../images/menu/payroll.png");
+}
+.menu-icon-acct_pay {
+	background-image: url("../images/menu/acct_pay.png");
+}
+.menu-icon-recieve {
+	background-image: url("../images/menu/recieve.png");
+}
+.menu-icon-general_ledger {
+	background-image: url("../images/menu/general_ledger.png");
+}
+.menu-icon-code {
+	background-image: url("../images/menu/code.png");
+}
+.menu-icon-admin {
+	background-image: url("../images/menu/admin.png");
+}
+.menu-icon-exeinfo {
+	background-image: url("../images/menu/exeinfo.png");
+}
+.menu-icon-edi {
+	background-image: url("../images/menu/edi.png");
+}
+.menu_title {
+	font: bold 14pt/normal lato; text-align: center; color: rgb(127, 138, 73); padding-left: 15px; margin-top: 6px; font-size-adjust: none; font-stretch: normal;
+}
+#div_menu {
+	background: rgb(52, 152, 219);
+}
+.menu_title {
+	padding-left: 0px; font-family: lato;
+}
+#sweet-input {
+	
+}
+.sweet-alert {
+	background: rgb(68, 68, 68); border: currentColor; border-image: none; width: 400px; box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+.sweet-alert h2 {
+	color: rgb(255, 255, 255); font-size: 18px;
+}
+.sweet-alert button {
+	margin: 7px -120px 0px; padding: 8px 31px; border-radius: 5px; border: 1px solid rgb(255, 255, 255); border-image: none; color: white; font-size: 15px; font-weight: bold; background-color: rgb(68, 68, 68);
+}
+.sweet-alert button:hover {
+	background-color: rgb(102, 102, 102);
+}
+.sweet-alert button.cancel {
+	background-color: rgb(68, 68, 68);
+}
+.sweet-alert button.cancel:hover {
+	background-color: rgb(102, 102, 102);
+}
+.ui-icon {
+	background-position: -32px 0px; background-image: url("../jquery/themes/base/images/ui-icons_222222_256x240.png");
+}
+.ui-widget-content .ui-icon:hover {
+	background-position: -32px 0px; background-image: url("../jquery/themes/base/images/ui-icons_222222_256x240.png");
+}
+.ui-menu {
+	width: 220px; margin-left: 13px;
+}
+.ui-state-active {
+	background: none;
+}
+.ui-widget-content .ui-state-active {
+	background: none;
+}
+.ui-widget-header .ui-state-active {
+	background: none;
+}
+.ui-icon {
+	background-image: url("../scripts/jquery/themes/base/images/ui-icons_ffffff_256x240.png");
+}
+.ui-widget-content .ui-icon {
+	background-image: url("../scripts/jquery/themes/base/images/ui-icons_ffffff_256x240.png");
+}
+.ui-menu {
+	width: 220px; margin-top: 5px; margin-left: 0px;
+}
+.ui-corner-all {
+	border-radius: 0px;
+}
+.ui-corner-bottom {
+	border-radius: 0px;
+}
+.ui-corner-left {
+	border-radius: 0px;
+}
+.ui-corner-bl {
+	border-radius: 0px;
+}
+.ui-icon {
+	background-position: -32px 0px; background-image: url("../scripts/jquery/themes/base/images/ui-icons_ffffff_256x240.png");
+}
+.ui-widget-content .ui-icon:hover {
+	background-position: -32px 0px; background-image: url("../scripts/jquery/themes/base/images/ui-icons_ffffff_256x240.png");
+}
+.ui-menu .ui-menu-item {
+	background: 0px 0px rgb(52, 152, 219); font-family: lato; font-size: 14px; margin-bottom: 0px; border-bottom-color: rgb(62, 162, 213); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.ui-menu .ui-menu-item :hover {
+	background: rgb(30, 130, 197); color: rgb(255, 255, 255);
+}
+#menu a:hover {
+	background: rgb(30, 130, 197); border: currentColor; border-image: none;
+}
+#menu a.active {
+	background: rgb(30, 130, 197); border: currentColor; border-image: none;
+}
+.ui-state-active {
+	background: rgb(16, 116, 183); color: rgb(255, 255, 255);
+}
+.ui-widget-content .ui-state-active {
+	background: rgb(16, 116, 183); color: rgb(255, 255, 255);
+}
+.ui-widget-header .ui-state-active {
+	background: rgb(16, 116, 183); color: rgb(255, 255, 255);
+}
+.ui-widget-content {
+	background: none; border: currentColor; border-image: none; color: rgb(34, 34, 34);
+}
+.ui-widget-content a {
+	color: rgb(255, 255, 255);
+}
+.ui-state-active {
+	border: currentColor; border-image: none;
+}
+.ui-widget-content .ui-state-active {
+	border: currentColor; border-image: none;
+}
+.ui-widget-header .ui-state-active {
+	border: currentColor; border-image: none;
+}
