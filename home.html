@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <!--
+    <meta charset="utf-8">
+    <!--
   Customize this policy to fit your own app's needs. For more guidance, see:
       https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
   Some notes:
@@ -11,126 +12,130 @@
       * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
           * Enable inline JS: add 'unsafe-inline' to default-src
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="theme-color" content="#2196f3">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
-  <title>My App</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>My App</title>
 
-<link rel="stylesheet" href="css/framework7.bundle.min.css">
-  <link rel="stylesheet" href="css/icons.css">
-  <link rel="stylesheet" href="css/app.css">
-<style>
-</style>
+    <link rel="stylesheet" href="css/framework7.bundle.min.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/app.css">
+    <style>
+
+    </style>
 
 </head>
+
 <body>
-	
-	New update
-	
-	
-  <div id="app">
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar"></div>
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main safe-areas">
-      <!-- Page, data-name contains page name which can be used in callbacks -->
-      <div class="page" data-name="home">
-        <!-- Top Navbar -->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="left">
-              <a href="#" class="link icon-only panel-open" data-panel="left">
-                <i class="icon f7-icons ios-only">menu</i>
-                <i class="icon material-icons md-only">menu</i>
-              </a>
-            </div>
-            <div class="title sliding" Style="margin-left:40%;">OHMTV</div>
+
+    New update
+
+
+    <div id="app">
+        <!-- Status bar overlay for fullscreen mode-->
+        <div class="statusbar"></div>
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main safe-areas">
+            <!-- Page, data-name contains page name which can be used in callbacks -->
+            <div class="page" data-name="home">
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link icon-only panel-open" data-panel="left">
+                                <i class="icon f7-icons ios-only">menu</i>
+                                <i class="icon material-icons md-only">menu</i>
+                            </a>
+                        </div>
+                        <div class="title sliding" Style="margin-left:40%;">OHMTV</div>
+                    </div>
+                </div>
+                <div class="panel panel-right panel-cover theme-dark">
+                    <div class="view">
+                        <div class="page">
+                            <div class="navbar">
+                                <div class="navbar-inner">
+                                    <div class="title">Menus</div>
+
+                                </div>
+                            </div>
+                            <div class="page-content">
+                                <div class="list links-list">
+                                    <ul>
+                                        <li><a href="/left-page-1/">Sales Order Lookup</a></li>
+                                        <li><a href="/left-page-2/">Purchase Order Lookup</a></li>
+                                        <li><a href="/left-page-3/">Customers</a></li>
+                                    </ul>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Toolbar-->
+                <div class="toolbar toolbar-bottom">
+                    <div class="toolbar-inner">
+                        <div class="right">
+                            <!-- Link to enable searchbar -->
+                            <a class="link icon-only searchbar-enable" data-searchbar=".searchbar">
+                                <i class="icon f7-icons ios-only">search_strong</i>
+                                <i class="icon material-icons md-only">search</i>
+                            </a>
+                        </div>
+                        <!-- Searchbar is a direct child of "navbar-inner" -->
+                        <form class="searchbar searchbar-expandable">
+                            <div class="searchbar-inner">
+                                <div class="searchbar-input-wrap">
+                                    <input type="search" placeholder="Search" />
+                                    <i class="searchbar-icon"></i>
+                                    <span class="input-clear-button"></span>
+                                </div>
+                                <span class="searchbar-disable-button">Cancel</span>
+                            </div>
+                        </form>
+                        <a href="/index/" class="link">Back</a>
+
+                    </div>
+                </div>
+                <div>one more test</div>
+                <!-- Scrollable page content-->
+
+
+
+
+
+
+
+
+
             </div>
         </div>
- <div class="panel panel-right panel-cover theme-dark">
-      <div class="view">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="title">Menus</div>
-
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="list links-list">
-              <ul>
-                <li><a href="/left-page-1/">Sales Order Lookup</a></li>
-                <li><a href="/left-page-2/">Purchase Order Lookup</a></li>
-				<li><a href="/left-page-3/">Customers</a></li>
-              </ul>
-            </div>            
-
-
-
-          </div>
-        </div>
-      </div>
     </div>
 
 
-        <!-- Toolbar-->
-        <div class="toolbar toolbar-bottom">
-          <div class="toolbar-inner">
-<div class="right">
-        <!-- Link to enable searchbar -->
-        <a class="link icon-only searchbar-enable" data-searchbar=".searchbar">
-          <i class="icon f7-icons ios-only">search_strong</i>
-          <i class="icon material-icons md-only">search</i>
-        </a>
-      </div>
-      <!-- Searchbar is a direct child of "navbar-inner" -->
-      <form class="searchbar searchbar-expandable">
-        <div class="searchbar-inner">
-          <div class="searchbar-input-wrap">
-            <input type="search" placeholder="Search"/>
-            <i class="searchbar-icon"></i>
-            <span class="input-clear-button"></span>
-          </div>
-          <span class="searchbar-disable-button">Cancel</span>
-        </div>
-      </form>
-            <a href="/index/" class="link">Back</a>
-           
-          </div>
-        </div>
-        <!-- Scrollable page content-->
 
 
-
-
-    
-
-         
-
-         
-        </div>
-      </div>
-    </div>
-
-    
-
-
-  <!-- Cordova -->
-  <!--
+    <!-- Cordova -->
+    <!--
   <script src="cordova.js"></script>
   -->
 
-  <!-- Framework7 library -->
-  <script src="/js/framework7.bundle.min.js"></script>
+    <!-- Framework7 library -->
+    <script src="/js/framework7.bundle.min.js"></script>
 
-  <!-- App routes -->
-  <script src="/js/routes.js"></script>
+    <!-- App routes -->
+    <script src="/js/routes.js"></script>
 
-  <!-- Your custom app scripts -->
-  <script src="/js/app.js"></script>
+    <!-- Your custom app scripts -->
+    <script src="/js/app.js"></script>
 </body>
+
 </html>
